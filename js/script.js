@@ -5,7 +5,7 @@ $(document).ready(function () {
       id: ".currency-slider",
       options: {
         loop: true,
-        lazyLoad: true,
+        
         nav: true,
         dots: true,
         rtl: true,
@@ -90,7 +90,7 @@ $(document).ready(function () {
       id: "#safit-slider",
       options: {
         loop: true,
-        lazyLoad: true,
+        
         margin: 10,
         rtl: true,
         nav: true,
