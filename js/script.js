@@ -1,11 +1,26 @@
 $(document).ready(function () {
+  $(".owl-news").owlCarousel({
+    loop: true,
+    margin: 20,
+    rtl: true,
+    nav: true,
+    navText: [
+      "<i class='fa-solid fa-chevron-right'></i>",
+      "<i class='fa-solid fa-chevron-left'></i>",
+    ],
+    responsive: {
+      0: { items: 1.5 },
+      600: { items: 2 },
+      1000: { items: 2 },
+    },
+  });
   // Initialize sliders with configurations
   const sliderConfigs = [
     {
       id: ".currency-slider",
       options: {
         loop: true,
-        
+
         nav: true,
         dots: true,
         rtl: true,
@@ -13,6 +28,7 @@ $(document).ready(function () {
         responsive: { 0: { items: 1 }, 600: { items: 2 }, 1000: { items: 1 } },
       },
     },
+
     {
       id: "#slider1",
       options: {
@@ -35,7 +51,7 @@ $(document).ready(function () {
       id: "#slider2",
       options: {
         loop: true,
-        margin: 10,
+        margin: 20,
         rtl: true,
         nav: true,
         navText: [
@@ -90,8 +106,8 @@ $(document).ready(function () {
       id: "#safit-slider",
       options: {
         loop: true,
-        
-        margin: 10,
+
+        margin: 20,
         rtl: true,
         nav: true,
         dots: true,
@@ -104,8 +120,6 @@ $(document).ready(function () {
   ];
 
   sliderConfigs.forEach(({ id, options }) => $(id).owlCarousel(options));
-
-
 
   $(".right-choises li").on("click", function () {
     $(".right-choises li").removeClass("active");
@@ -139,7 +153,7 @@ $(document).ready(function () {
     });
   });
 
-  $(".share-arrow, h4").click(function (e) {
+  $(".share-arrow, .share h4 ,.btn-share").click(function (e) {
     e.preventDefault();
     $(this).siblings(".share-social-icons").toggle();
   });
