@@ -46,329 +46,294 @@
     <header>
         <!-- top-bar-start -->
         <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-container">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" />
-                        </a>
-                    </div>
-
-                    <div class="top-bar-input">
-
-                        <input class="search-input" placeholder="بحث عن.." />
-                        <button class="top-bar-btn">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                    </div>
-                    <div class="left-icons">
-                        <div class="icon-container">
-                            <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" />
-
-                            <div class="curancy-mega-menu">
-                                <div class="mega-menu-content">
-                                    <h2 class="currency-mega-menu-title">العملات</h2>
-                                    <div class="currency-mega-menu">
-                                        <!-- First Slider -->
-                                        <div class="owl-carousel currency-slider">
-                                            <!-- Slide 1 -->
-                                            <div class="slide">
-                                                <h3>الدولار اليوم</h3>
-
-                                                <div class="currency-row">
-                                                    <div class="currency">
-                                                        <p>دولار أسترالي</p>
-                                                        <span>1.604 AUD</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>الدولار الكندي</p>
-                                                        <span>1.434 CAD</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>جنيه إسترليني</p>
-                                                        <span>0.792 GBP</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>يورو</p>
-                                                        <span>0.960 EUR</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Second Slider -->
-                                        <div class="owl-carousel currency-slider">
-                                            <!-- Slide 1 -->
-                                            <div class="slide">
-                                                <h3>اليورو اليوم</h3>
-                                                <div class="currency-row">
-                                                    <div class="currency">
-                                                        <p>دولار أسترالي</p>
-                                                        <span>1.604 AUD</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>الدولار الكندي</p>
-                                                        <span>1.434 CAD</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>جنيه إسترليني</p>
-                                                        <span>0.792 GBP</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>يورو</p>
-                                                        <span>0.960 EUR</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Slide 2 -->
-                                            <div class="slide">
-                                                <h3>اليورو اليوم</h3>
-
-                                                <div class="currency-row">
-                                                    <div class="currency">
-                                                        <p>دولار أسترالي</p>
-                                                        <span>1.670 AED</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>الدولار الكندي</p>
-                                                        <span>1.494 CAD</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>جنيه إسترليني</p>
-                                                        <span>0.825 GBP</span>
-                                                    </div>
-                                                    <div class="currency">
-                                                        <p>الدولار الأمريكي</p>
-                                                        <span>1.041 USD</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+          <div class="container">
+            <div class="top-bar-container">
+              <div class="logo">
+                <a href="#">
+                  <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" />
+                </a>
+              </div>
+    
+              <div class="top-bar-input">
+    
+                <input class="search-input" placeholder="بحث عن.." />
+                <button class="top-bar-btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <div class="left-icons">
+                <div class="icon-container">
+                  <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" />
+                  <div class="curancy-mega-menu">
+                    <div class="mega-menu-content">
+                      <h2 class="currency-mega-menu-title">الطقس</h2>
+                      <div class="currency-mega-menu">
+    
+                        <!-- First Slider: الدولار اليوم -->
+                        <div class="background-currency">
+                          <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                            <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                              <div class="dot-title red-dot"></div>
+                              <h5>الدولار اليوم</h5>
                             </div>
+                            <div class="date"></div>
+                          </header>
+                          <div class="owl-carousel slider-usd owl-theme currency-slider"></div>
                         </div>
-
-                        <div class="v-line"></div>
-
-                        <div class="icon-container">
-                            <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" />
-                            <div class="weather-mega-menu">
-                                <!-- weather-mega-menu الطقس-->
-                                <div class="mega-menu-content">
-                                    <div class="weather-mega-menu-header">
-                                        <h4>الطقس</h4>
-                                    </div>
-                                </div>
+    
+                        <!-- Second Slider: اليورو اليوم -->
+                        <div class="background-currency">
+                          <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                            <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                              <div class="dot-title red-dot"></div>
+                              <h5>اليورو اليوم</h5>
                             </div>
+                            <div class="date"></div>
+                          </header>
+                          <div class="owl-carousel slider-eur owl-theme currency-slider"></div>
                         </div>
-
-                        <div class="v-line"></div>
-                        <div class="icon-container">
-                            <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" />
-                            <div class="notifications-mega-menu">
-                                <!-- Mega Menu Content for Notification -->
-                                <div class="mega-menu-content">
-                                    <div class="notifications-container">
-                                        <h2 class="notifications-header">اشعارات</h2>
-                                        <div class="notification-item">
-                                            <div class="notification-header">
-                                                <div class="notification-contant">
-                                                    <span class="notification-title">عزة</span>
-                                                    <span class="notification-time">9:10، ديسمبر 2024</span>
-                                                </div>
-                                                <div class="notification-text">
-                                                    <h6>قطاع المياه في غزة</h6>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                                                اليومية وارتفاع في التلوث.
-                                            </p>
-                                        </div>
-                                        <div class="notification-item">
-                                            <div class="notification-header">
-                                                <div class="notification-contant">
-                                                    <span class="notification-title">عزة</span>
-                                                    <span class="notification-time">9:10، ديسمبر 2024</span>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                                                اليومية وارتفاع في التلوث.
-                                            </p>
-                                        </div>
-                                        <div class="notification-item">
-                                            <div class="notification-header">
-                                                <div class="notification-contant">
-                                                    <span class="notification-title">عزة</span>
-                                                    <span class="notification-time">9:10، ديسمبر 2024</span>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                                                اليومية وارتفاع في التلوث.
-                                            </p>
-                                        </div>
-                                        <div class="notification-read-more">
-                                            <i class="fa-solid fa-chevron-left"></i>
-                                            <i class="fa-solid fa-chevron-left"></i>اقرأ المزيد
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+    
+                      </div>
                     </div>
+                  </div>
+    
                 </div>
+    
+                <div class="v-line"></div>
+    
+                <div class="icon-container">
+                  <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" />
+                  <div class="weather-mega-menu curancy-mega-menu">
+                    <div class="mega-menu-content">
+                      <h2 class="weather-mega-menu-title currency-mega-menu-title">الطقس</h2>
+                      <div class="weather-sliders">
+                        <!-- Slider for Weather Data -->
+    
+                        <div class="owl-carousel weather-slider owl-theme">
+                          <!-- سيتم تعبئة البيانات ديناميكيًا هنا -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="v-line"></div>
+                <div class="icon-container">
+                  <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" />
+                  <div class="notifications-mega-menu">
+                    <!-- Mega Menu Content for Notification -->
+                    <div class="mega-menu-content">
+                      <div class="notifications-container">
+                        <h2 class="notifications-header currency-mega-menu-title">اشعارات</h2>
+                        <div class="notification-item">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                              <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                <div class="dot-title red-dot"></div>
+                                <h5>غزة </h5>
+                              </div>
+                              <div class="date"></div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
+                          </div>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                            اليومية وارتفاع في التلوث.
+                          </p>
+                        </div>
+                        <div class="notification-item">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                              <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                <div class="dot-title red-dot"></div>
+                                <h5>غزة </h5>
+                              </div>
+                              <div class="date"></div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
+                          </div>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                            اليومية وارتفاع في التلوث.
+                          </p>
+                        </div>
+                        <div class="notification-item">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                              <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                <div class="dot-title red-dot"></div>
+                                <h5>غزة </h5>
+                              </div>
+                              <div class="date"></div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
+                          </div>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                            اليومية وارتفاع في التلوث.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+              </div>
             </div>
+          </div>
         </div>
-
+    
         <!-- top-bar-end -->
-
+    
         <!-- nav-bar-start -->
-
+    
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container">
-                <div class="d-flex align-items-center py-3 gap-2">
-                    <button class="navbar-toggler pt-2 " type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
-                    </button>
-                    <!-- Input field for mobile screens -->
-                    <input type="text" class="form-control d-lg-none " style="max-width: 450px" dir="rtl"
-                        placeholder="ابحث عن....." />
-                </div>
-
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">الرئيسية</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link custom-hover" id="local-news-toggle" href="#">
-                                أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
-                            </a>
-                            <div class="mega-menu" id="local-news-slide-menu">
-                                <div class="menu-container">
-                                    <div class="menu-item">
-                                        <h3>القدس</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>غزة</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>نابلس</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>الخليل</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>رام الله</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>طولكرم</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>بيت لحم</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>قلقيلية</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>الداخل المحتل</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-item">
-                                        <h3>أريحا</h3>
-                                        <ul>
-                                            <li>خبر الأول للمنطقة</li>
-                                            <li>خبر الثاني للمنطقة</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">تقارير بوست</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">مقالات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">بودكاست</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">عربي دولي</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">فيديو</a>
-                        </li>
-                        <li class="nav-item dropdown" id="more-mega-menu">
-                            <a class="nav-link custom-hover" href="#">
-                                الـمزيــد<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
-                            </a>
-                            <div class="mega-menu" id="mega-menu">
-                                <div class="mega-menu-column">
-                                    <h3>الـمزيــد</h3>
-                                    <a href="#">اتصل بنا</a>
-                                    <a href="#">من نحن</a>
-                                    <a href="#">ارسل خبر</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">اتصل بنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">من نحن</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link custom-hover" href="#">ارسل خبر</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <div class="container">
+              <div class="d-flex align-items-center py-3 gap-2">
+                  <button class="navbar-toggler pt-2 " type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
+                  </button>
+                  <!-- Input field for mobile screens -->
+                  <input type="text" class="form-control d-lg-none " style="max-width: 450px" dir="rtl"
+                      placeholder="ابحث عن....." />
+              </div>
+    
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">الرئيسية</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link custom-hover" id="local-news-toggle" href="#">
+                              أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                          </a>
+                          <div class="mega-menu" id="local-news-slide-menu">
+                              <div class="menu-container">
+                                  <div class="menu-item">
+                                      <h3>القدس</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>غزة</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>نابلس</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>الخليل</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>رام الله</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>طولكرم</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>بيت لحم</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>قلقيلية</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>الداخل المحتل</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                                  <div class="menu-item">
+                                      <h3>أريحا</h3>
+                                      <ul>
+                                          <li>خبر الأول للمنطقة</li>
+                                          <li>خبر الثاني للمنطقة</li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+    
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">تقارير بوست</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">مقالات</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">بودكاست</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">عربي دولي</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">فيديو</a>
+                      </li>
+                      <li class="nav-item dropdown" id="more-mega-menu">
+                          <a class="nav-link custom-hover" href="#">
+                              الـمزيــد<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                          </a>
+                          <div class="mega-menu" id="mega-menu">
+                              <div class="mega-menu-column">
+                                  <h3>الـمزيــد</h3>
+                                  <a href="#">اتصل بنا</a>
+                                  <a href="#">من نحن</a>
+                                  <a href="#">ارسل خبر</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">اتصل بنا</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">من نحن</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link custom-hover" href="#">ارسل خبر</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
         <!-- nav-bar-end -->
-    </header>
+      </header>
 
     <section class="breadcrumb">
         <div class="container">

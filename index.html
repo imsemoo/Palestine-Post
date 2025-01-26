@@ -125,13 +125,16 @@
                 <!-- Mega Menu Content for Notification -->
                 <div class="mega-menu-content">
                   <div class="notifications-container">
-                    <h2 class="notifications-header">اشعارات</h2>
+                    <h2 class="notifications-header currency-mega-menu-title">اشعارات</h2>
                     <div class="notification-item">
                       <div class="notification-header">
-                        <div class="notification-contant">
-                          <span class="notification-title">عزة</span>
-                          <span class="notification-time">9:10، ديسمبر 2024</span>
-                        </div>
+                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                            <div class="dot-title red-dot"></div>
+                            <h5>غزة </h5>
+                          </div>
+                          <div class="date"></div>
+                        </header>
                         <div class="notification-text">
                           <h6>قطاع المياه في غزة</h6>
                         </div>
@@ -143,9 +146,15 @@
                     </div>
                     <div class="notification-item">
                       <div class="notification-header">
-                        <div class="notification-contant">
-                          <span class="notification-title">عزة</span>
-                          <span class="notification-time">9:10، ديسمبر 2024</span>
+                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                            <div class="dot-title red-dot"></div>
+                            <h5>غزة </h5>
+                          </div>
+                          <div class="date"></div>
+                        </header>
+                        <div class="notification-text">
+                          <h6>قطاع المياه في غزة</h6>
                         </div>
                       </div>
                       <p>
@@ -155,19 +164,21 @@
                     </div>
                     <div class="notification-item">
                       <div class="notification-header">
-                        <div class="notification-contant">
-                          <span class="notification-title">عزة</span>
-                          <span class="notification-time">9:10، ديسمبر 2024</span>
+                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                            <div class="dot-title red-dot"></div>
+                            <h5>غزة </h5>
+                          </div>
+                          <div class="date"></div>
+                        </header>
+                        <div class="notification-text">
+                          <h6>قطاع المياه في غزة</h6>
                         </div>
                       </div>
                       <p>
                         قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
                         اليومية وارتفاع في التلوث.
                       </p>
-                    </div>
-                    <div class="notification-read-more">
-                      <i class="fa-solid fa-angles-left"></i>
-                      اقرأ المزيد
                     </div>
                   </div>
                 </div>
@@ -185,142 +196,143 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <div class="d-flex align-items-center">
-          <button class="navbar-toggler pt-2 mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
-          </button>
-          <!-- Input field for mobile screens -->
-          <input type="text" class="form-control d-lg-none ms-4 mt-4" style="max-width: 450px" dir="rtl"
-            placeholder="ابحث عن....." />
-        </div>
+          <div class="d-flex align-items-center py-3 gap-2">
+              <button class="navbar-toggler pt-2 " type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
+              </button>
+              <!-- Input field for mobile screens -->
+              <input type="text" class="form-control d-lg-none " style="max-width: 450px" dir="rtl"
+                  placeholder="ابحث عن....." />
+          </div>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">الرئيسية</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link custom-hover" id="local-news-toggle" href="#">
-                أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
-              </a>
-              <div class="mega-menu" id="local-news-slide-menu">
-                <div class="menu-container">
-                  <div class="menu-item">
-                    <h3>القدس</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>غزة</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>نابلس</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>الخليل</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>رام الله</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>طولكرم</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>بيت لحم</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>قلقيلية</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>الداخل المحتل</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                  <div class="menu-item">
-                    <h3>أريحا</h3>
-                    <ul>
-                      <li>خبر الأول للمنطقة</li>
-                      <li>خبر الثاني للمنطقة</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">الرئيسية</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link custom-hover" id="local-news-toggle" href="#">
+                          أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                      </a>
+                      <div class="mega-menu" id="local-news-slide-menu">
+                          <div class="menu-container">
+                              <div class="menu-item">
+                                  <h3>القدس</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>غزة</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>نابلس</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>الخليل</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>رام الله</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>طولكرم</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>بيت لحم</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>قلقيلية</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>الداخل المحتل</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                              <div class="menu-item">
+                                  <h3>أريحا</h3>
+                                  <ul>
+                                      <li>خبر الأول للمنطقة</li>
+                                      <li>خبر الثاني للمنطقة</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
 
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">تقارير بوست</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">مقالات</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">بودكاست</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">عربي دولي</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">فيديو</a>
-            </li>
-            <li class="nav-item dropdown" id="more-mega-menu">
-              <a class="nav-link custom-hover" href="#">
-                الـمزيــد<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
-              </a>
-              <div class="mega-menu" id="mega-menu">
-                <div class="mega-menu-column">
-                  <h3>الـمزيــد</h3>
-                  <a href="#">اتصل بنا</a>
-                  <a href="#">من نحن</a>
-                  <a href="#">ارسل خبر</a>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">اتصل بنا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">من نحن</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link custom-hover" href="#">ارسل خبر</a>
-            </li>
-          </ul>
-        </div>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">تقارير بوست</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">مقالات</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">بودكاست</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">عربي دولي</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">فيديو</a>
+                  </li>
+                  <li class="nav-item dropdown" id="more-mega-menu">
+                      <a class="nav-link custom-hover" href="#">
+                          الـمزيــد<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                      </a>
+                      <div class="mega-menu" id="mega-menu">
+                          <div class="mega-menu-column">
+                              <h3>الـمزيــد</h3>
+                              <a href="#">اتصل بنا</a>
+                              <a href="#">من نحن</a>
+                              <a href="#">ارسل خبر</a>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">اتصل بنا</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">من نحن</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link custom-hover" href="#">ارسل خبر</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </nav>
+  </nav>
     <!-- nav-bar-end -->
   </header>
 
@@ -356,12 +368,10 @@
                   12:06 م 09 ديسمبر 2024
                 </p>
 
-                <h3 class="read-more">
-                  <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                    اقرأ المزيد
-                    <i class="fa-solid fa-angles-left"></i>
-                  </a>
-                </h3>
+                <a href="#" class="btn btn-outline-primary read-more">
+                  اقرأ المزيد
+                  <i class="fa-solid fa-angles-left"></i>
+                </a>
               </div>
             </div>
 
@@ -378,12 +388,10 @@
                   12:06 م 09 ديسمبر 2024
                 </p>
 
-                <h3 class="read-more">
-                  <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                    اقرأ المزيد
-                    <i class="fa-solid fa-angles-left"></i>
-                  </a>
-                </h3>
+                <a href="#" class="btn btn-outline-primary read-more">
+                  اقرأ المزيد
+                  <i class="fa-solid fa-angles-left"></i>
+                </a>
               </div>
             </div>
 
@@ -400,12 +408,10 @@
                   12:06 م 09 ديسمبر 2024
                 </p>
 
-                <h3 class="read-more">
-                  <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                    اقرأ المزيد
-                    <i class="fa-solid fa-angles-left"></i>
-                  </a>
-                </h3>
+                <a href="#" class="btn btn-outline-primary read-more">
+                  اقرأ المزيد
+                  <i class="fa-solid fa-angles-left"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -457,22 +463,35 @@
                   <div class="card-title">
                     <p>أخبار محلية</p>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
                       <div class="share-social-icons social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -488,12 +507,10 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                          اقرأ المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
                   </small>
                 </div>
@@ -505,22 +522,35 @@
                   <div class="card-title">
                     <p>أخبار محلية</p>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
                       <div class="share-social-icons social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -535,12 +565,10 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                          اقرأ المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
                   </small>
                 </div>
@@ -552,22 +580,35 @@
                   <div class="card-title">
                     <p>أخبار محلية</p>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
                       <div class="share-social-icons social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -582,12 +623,10 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                          اقرأ المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
                   </small>
                 </div>
@@ -598,22 +637,35 @@
                 <div class="card-body">
                   <div class="card-title">
                     <p>أخبار محلية</p>
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                      <div class="share-social-icons" class="social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="Instagram" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                        </a>
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
+                      <div class="share-social-icons social-icons">
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -628,12 +680,10 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                          اقرأ المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
                   </small>
                 </div>
@@ -654,22 +704,35 @@
                     <h4>اخبار محلية</h4>
                     <!-- Local News Section -->
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                      <div class="share-social-icons" class="social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="Instagram" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                        </a>
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
+                      <div class="share-social-icons social-icons">
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -681,19 +744,16 @@
                   </h5>
 
                   <div class="date-container">
-                    <h3 class="date">
+                    <div class="date-article d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-calendar-days"></i>
                       12:06 م 09 ديسمبر 2024
-                      <!-- Date and time of the article -->
-                      <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
-                    </h3>
+                    </div>
 
                     <!-- Link for reading more, with proper context for SEO -->
-                    <h3 class="read-more">
-                      <a href="#" title="Read more about the military officer's statement">
-                        اقرأ المزيد
-                        <i class="fa-solid fa-angles-left"></i>
-                      </a>
-                    </h3>
+                    <a href="#" class="btn btn-outline-primary read-more">
+                      اقرأ المزيد
+                      <i class="fa-solid fa-angles-left"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -706,22 +766,35 @@
                 <div class="toggle-menu-text">
                   <div class="toggle-menu-text-top-line">
                     <h4>اخبار محلية</h4>
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                      <div class="share-social-icons" class="social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="Instagram" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                        </a>
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
+                      <div class="share-social-icons social-icons">
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -730,16 +803,14 @@
                     حاربناها 20 عاما
                   </h5>
                   <div class="date-container">
-                    <h3 class="date">
+                    <div class="date-article d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-calendar-days"></i>
                       12:06 م 09 ديسمبر 2024
-                      <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
-                    </h3>
-                    <h3 class="read-more">
-                      <a href="#" title="Read more about the military officer's statement">
-                        اقرا المزيد
-                        <i class="fa-solid fa-angles-left"></i>
-                      </a>
-                    </h3>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary read-more">
+                      اقرأ المزيد
+                      <i class="fa-solid fa-angles-left"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -752,22 +823,35 @@
                   <h3>بودكاست</h3>
 
                   <!-- Podcast Section -->
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                    <div class="share-social-icons" class="social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="Instagram" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                      </a>
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
+                    <div class="share-social-icons social-icons">
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
                 </div>
@@ -781,22 +865,35 @@
                   <div class="card-title">
                     <p>فيديو</p>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                      <div class="share-social-icons" class="social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="Instagram" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                        </a>
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
+                      <div class="share-social-icons social-icons">
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -811,12 +908,10 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="اقرأ المزيد عن قطاع المياه في غزة">
-                          اقرأ المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
                   </small>
                 </div>
@@ -827,22 +922,35 @@
                 <div class="Quotation-slider-content">
                   <div class="share-container">
                     <i class="fa-solid fa-quote-right" alt="Quotation icon"></i>
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" onclick="toggleSocialIcons()" />
-                      <div class="share-social-icons" id="social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="whatsapp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
+                      <div class="share-social-icons social-icons">
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
 
@@ -882,11 +990,11 @@
                   </div>
                 </div>
                 <div class="date-container">
-                  <h3 class="date">
-                    <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                  <div class="date-article d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i>
                     12:06 م 09 ديسمبر 2024
-                  </h3>
-                  <h3 class="read-more">
+                  </div>
+                  <h3 class="btn btn-outline-primary read-more">
                     <a href="#" title="Read more about Hanaa Saleh's experience in prisons">
                       اقرا المزيد
                       <i class="fa-solid fa-angles-left"></i>
@@ -917,36 +1025,45 @@
                   </p>
 
                   <div class="date-container">
-                    <h3 class="date">
+                    <div class="date-article d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-calendar-days"></i>
                       12:06 م 09 ديسمبر 2024
-                      <!-- Adding alt text to the calendar icon for accessibility -->
-                      <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
-                    </h3>
+                    </div>
 
-                    <h3 class="read-more">
-                      <a href="#" title="Read more about the military officer's statement">
-                        اقرا المزيد
-                        <i class="fa-solid fa-angles-left"></i>
-                      </a>
-                    </h3>
+                    <a href="#" class="btn btn-outline-primary read-more">
+                      اقرأ المزيد
+                      <i class="fa-solid fa-angles-left"></i>
+                    </a>
                   </div>
-
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
                     <div class="share-social-icons social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                      </a>
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
                 </div>
@@ -975,36 +1092,45 @@
                   </p>
 
                   <div class="date-container">
-                    <h3 class="date">
+                    <div class="date-article d-flex align-items-center gap-2">
+                      <i class="fa-solid fa-calendar-days"></i>
                       12:06 م 09 ديسمبر 2024
-                      <!-- Added alt text to the calendar icon for accessibility -->
-                      <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
-                    </h3>
-
-                    <h3 class="read-more">
-                      <a href="#" title="Read more about the military officer's statement">
-                        اقرا المزيد
-                        <i class="fa-solid fa-angles-left"></i>
-                      </a>
-                    </h3>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary read-more">
+                      اقرأ المزيد
+                      <i class="fa-solid fa-angles-left"></i>
+                    </a>
                   </div>
 
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
                     <div class="share-social-icons social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                      </a>
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
                 </div>
@@ -1048,30 +1174,41 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="Read more about the Israeli military officer's statement">
-                          اقرا المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
                       <div class="share-social-icons social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -1105,30 +1242,41 @@
                         12:06 م 09 ديسمبر 2024
                       </p>
 
-                      <h3 class="read-more">
-                        <a href="#" title="Read more about the Israeli military officer's statement">
-                          اقرا المزيد
-                          <i class="fa-solid fa-angles-left"></i>
-                        </a>
-                      </h3>
+                      <a href="#" class="btn btn-outline-primary read-more">
+                        اقرأ المزيد
+                        <i class="fa-solid fa-angles-left"></i>
+                      </a>
                     </div>
 
-                    <div class="share">
-                      <h4>شارك</h4>
-                      <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                    <div class="share-article">
+                      <h4 class="btn-share">
+                        شارك
+                        <i class="fa-solid fa-share"></i>
+                      </h4>
                       <div class="share-social-icons social-icons">
-                        <a href="https://facebook.com" target="_blank">
-                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank">
-                          <img src="./imgs/twitter.png" alt="Twitter" />
-                        </a>
-                        <a href="https://whatsapp.com" target="_blank">
-                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                        </a>
-                        <a href="https://Telegram.com" target="_blank">
-                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                        </a>
+                        <ul>
+                          <li>
+                            <a href="https://facebook.com" target="_blank">
+                              <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com" target="_blank">
+                              <img src="./imgs/twitter.png" alt="Twitter" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://whatsapp.com" target="_blank">
+                              <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://Telegram.com" target="_blank">
+                              <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                            </a>
+                          </li>
+                        </ul>
+
                       </div>
                     </div>
                   </div>
@@ -1263,22 +1411,35 @@
 
                     <div class="podcast-contant ">
                       <h4 class="card-title-with-dot">بودكاست</h4>
-                      <div class="share">
-                        <h4>شارك</h4>
-                        <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                      <div class="share-article">
+                        <h4 class="btn-share">
+                          شارك
+                          <i class="fa-solid fa-share"></i>
+                        </h4>
                         <div class="share-social-icons social-icons">
-                          <a href="https://facebook.com" target="_blank">
-                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                          </a>
-                          <a href="https://twitter.com" target="_blank">
-                            <img src="./imgs/twitter.png" alt="Twitter" />
-                          </a>
-                          <a href="https://whatsapp.com" target="_blank">
-                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                          </a>
-                          <a href="https://Telegram.com" target="_blank">
-                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                          </a>
+                          <ul>
+                            <li>
+                              <a href="https://facebook.com" target="_blank">
+                                <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://twitter.com" target="_blank">
+                                <img src="./imgs/twitter.png" alt="Twitter" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://whatsapp.com" target="_blank">
+                                <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://Telegram.com" target="_blank">
+                                <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                              </a>
+                            </li>
+                          </ul>
+  
                         </div>
                       </div>
 
@@ -1324,15 +1485,39 @@
                     <p class="card-text"> ضابط في جيش الاحتلال: لن نصل الي اخر صاروخ لحماس حتي لو حاربناها
                       ٢٠ عاما</p>
                     <div class="share-date">
-                      <h3 class="date">
-                        ١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤
-                        <i class="fa-regular fa-calendar"></i>
-                      </h3>
-
-                      <div class="share">
-                        <h4>شارك</h4>
-                        <div>
-                          <img src="./imgs/share-arrow.png" alt="Share arrow icon" loading="lazy" />
+                      <div class="date-article d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        12:06 م 09 ديسمبر 2024
+                      </div>
+                      <div class="share-article">
+                        <h4 class="btn-share">
+                          شارك
+                          <i class="fa-solid fa-share"></i>
+                        </h4>
+                        <div class="share-social-icons social-icons">
+                          <ul>
+                            <li>
+                              <a href="https://facebook.com" target="_blank">
+                                <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://twitter.com" target="_blank">
+                                <img src="./imgs/twitter.png" alt="Twitter" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://whatsapp.com" target="_blank">
+                                <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                              </a>
+                            </li>
+                            <li>
+                              <a href="https://Telegram.com" target="_blank">
+                                <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                              </a>
+                            </li>
+                          </ul>
+  
                         </div>
                       </div>
                     </div>
@@ -1347,22 +1532,35 @@
                   <span class="author-quote">
                     <i class="fa-solid fa-quote-right"></i>
                   </span>
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
                     <div class="share-social-icons social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                      </a>
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
 
@@ -1397,22 +1595,35 @@
 
                   <h4 class="card-title-with-dot">مقالات</h4>
 
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
                     <div class="share-social-icons social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                      </a>
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
 
@@ -1437,11 +1648,11 @@
                 </p>
 
                 <div class="date-container">
-                  <h3 class="date">
-                    ١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤
-                    <i class="fa-regular fa-calendar"></i>
-                  </h3>
-                  <h3 class="read-more">
+                  <div class="date-article d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    12:06 م 09 ديسمبر 2024
+                  </div>
+                  <h3 class="btn btn-outline-primary read-more">
                     <a href="#">
                       اقرا المزيد
                       <i class="fa-solid fa-angles-left"></i>
@@ -1467,85 +1678,81 @@
         <!-- right section end -->
       </div>
       <div class="col-md-3">
-        <section class="left-section">
-          <div class="left-section-header">
-            <h2 class="first-header">أخر الأخبار</h2>
-            <h2 class="seconed-header">الأكثر قراءة</h2>
+        <div class="small-articles-group">
+          <ul class="buttons-group-tabs">
+            <li class="active" data-tab="last-news">أخر الأخبار</li>
+            <li data-tab="most-read">الأكثر قراءة</li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane last-news">
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <!-- المزيد من المحتوى هنا -->
+            </div>
+
+            <div class="tab-pane most-read" style="display: none;">
+              <div class="left-section-card small-card-last-news">
+                <div class="left-section-img">
+                  <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
+                    alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
+                </div>
+                <div class="left-section-card-text">
+                  <h4>قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات رام الله</h4>
+                  <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
+                </div>
+              </div>
+              <!-- المزيد من المحتوى هنا -->
+            </div>
           </div>
-
-          <div class="left-section-card small-card-last-news">
-            <div class="left-section-img">
-              <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
-                alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
-            </div>
-            <div class="left-section-card-text ">
-              <h4>
-                قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات
-                رام الله
-              </h4>
-              <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
-            </div>
-
-          </div>
-
-          <div class="left-section-card small-card-last-news">
-            <div class="left-section-img">
-              <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
-                alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
-            </div>
-            <div class="left-section-card-text ">
-              <h4>
-                قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات
-                رام الله
-              </h4>
-              <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
-            </div>
-
-          </div>
-          <div class="left-section-card small-card-last-news">
-            <div class="left-section-img">
-              <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
-                alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
-            </div>
-            <div class="left-section-card-text ">
-              <h4>
-                قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات
-                رام الله
-              </h4>
-              <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
-            </div>
-
-          </div>
-          <div class="left-section-card small-card-last-news">
-            <div class="left-section-img">
-              <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
-                alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
-            </div>
-            <div class="left-section-card-text ">
-              <h4>
-                قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات
-                رام الله
-              </h4>
-              <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
-            </div>
-
-          </div>
-          <div class="left-section-card small-card-last-news">
-            <div class="left-section-img">
-              <img src="https://dummyimage.com/95x95/dddddd/000000/" loading="lazy"
-                alt="خبر عن اعتقال شاب من جنين واقتحام بلدات رام الله" />
-            </div>
-            <div class="left-section-card-text ">
-              <h4>
-                قوات الاحتلال الاسرائيلي تعتقل شابا من جنين..و تقتحم بلدات
-                رام الله
-              </h4>
-              <p><i class="fa-regular fa-calendar"></i>١٢:٠٦م ٠٩ ديسمبر ٢٠٢٤</p>
-            </div>
-
-          </div>
-
-        </section>
+        </div>
         <div class="side-social-media">
           <h4 class="title-side">
             تـابعنـا علـى
@@ -1637,34 +1844,46 @@
                 اليوميه وارتفاع التلوث
               </h3>
               <div class="date-container">
-                <h3 class="date">
-                  <i class="fa-regular fa-calendar"></i>
+                <div class="date-article d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-calendar-days"></i>
                   12:06 م 09 ديسمبر 2024
-                </h3>
-                <h3 class="read-more">
+                </div>
+                <h3 class="btn btn-outline-primary read-more">
                   <a href="#">
                     اقرا المزيد
                     <i class="fa-solid fa-angles-left"></i>
                   </a>
                 </h3>
               </div>
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow"
-                  style="width: fit-content" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1680,34 +1899,46 @@
                 اليوميه وارتفاع التلوث
               </h3>
               <div class="date-container">
-                <h3 class="date">
-                  <i class="fa-regular fa-calendar"></i>
+                <div class="date-article d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-calendar-days"></i>
                   12:06 م 09 ديسمبر 2024
-                </h3>
-                <h3 class="read-more">
+                </div>
+                <h3 class="btn btn-outline-primary read-more">
                   <a href="#">
                     اقرا المزيد
                     <i class="fa-solid fa-angles-left"></i>
                   </a>
                 </h3>
               </div>
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow"
-                  style="width: fit-content" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1723,11 +1954,11 @@
                 اليوميه وارتفاع التلوث
               </h3>
               <div class="date-container">
-                <h3 class="date">
-                  <i class="fa-regular fa-calendar"></i>
+                <div class="date-article d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-calendar-days"></i>
                   12:06 م 09 ديسمبر 2024
-                </h3>
-                <h3 class="read-more">
+                </div>
+                <h3 class="btn btn-outline-primary read-more">
                   <a href="#">
                     اقرا المزيد
                     <i class="fa-solid fa-angles-left"></i>
@@ -1735,23 +1966,35 @@
                 </h3>
               </div>
 
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow"
-                  style="width: fit-content" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1773,33 +2016,46 @@
                 أحدث التطورات التكنولوجية في العالمالتحول الرقمي الشامل
               </h3>
               <div class="date-container">
-                <h3 class="date">
-                  ١٠:٠٠ص ١٥ ديسمبر ٢٠٢٤
-                  <i class="fa-regular fa-calendar"></i>
-                </h3>
-                <h3 class="read-more">
+                <div class="date-article d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  12:06 م 09 ديسمبر 2024
+                </div>
+                <h3 class="btn btn-outline-primary read-more">
                   <a href="#">
                     اقرا المزيد
                     <i class="fa-solid fa-angles-left"></i>
                   </a>
                 </h3>
               </div>
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                <div class="share-social-icons" class="social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="Instagram" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                  </a>
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
+                <div class="share-social-icons social-icons">
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1837,22 +2093,35 @@
             <div class="top-text">
               <h3 class="video-text-top">اخبار محلية</h3>
 
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1869,22 +2138,35 @@
             <i class="fa-regular fa-circle-play video-two-play-icon"></i>
             <div class="top-text">
               <h3 class="video-text-top">اخبار محلية</h3>
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1907,22 +2189,35 @@
             <div class="top-text">
               <h3 class="video-text-top">اخبار محلية</h3>
 
-              <div class="share">
-                <h4>شارك</h4>
-                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+              <div class="share-article">
+                <h4 class="btn-share">
+                  شارك
+                  <i class="fa-solid fa-share"></i>
+                </h4>
                 <div class="share-social-icons social-icons">
-                  <a href="https://facebook.com" target="_blank">
-                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <img src="./imgs/twitter.png" alt="Twitter" />
-                  </a>
-                  <a href="https://whatsapp.com" target="_blank">
-                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                  </a>
-                  <a href="https://Telegram.com" target="_blank">
-                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                  </a>
+                  <ul>
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <img src="./imgs/twitter.png" alt="Twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://whatsapp.com" target="_blank">
+                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://Telegram.com" target="_blank">
+                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                      </a>
+                    </li>
+                  </ul>
+
                 </div>
               </div>
             </div>
@@ -1968,22 +2263,35 @@
 
                 <div class="podcast-contant ">
                   <h4 class="card-title-with-dot">بودكاست</h4>
-                  <div class="share">
-                    <h4>شارك</h4>
-                    <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                  <div class="share-article">
+                    <h4 class="btn-share">
+                      شارك
+                      <i class="fa-solid fa-share"></i>
+                    </h4>
                     <div class="share-social-icons social-icons">
-                      <a href="https://facebook.com" target="_blank">
-                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                      </a>
-                      <a href="https://twitter.com" target="_blank">
-                        <img src="./imgs/twitter.png" alt="Twitter" />
-                      </a>
-                      <a href="https://whatsapp.com" target="_blank">
-                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
-                      </a>
-                      <a href="https://Telegram.com" target="_blank">
-                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
-                      </a>
+                      <ul>
+                        <li>
+                          <a href="https://facebook.com" target="_blank">
+                            <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com" target="_blank">
+                            <img src="./imgs/twitter.png" alt="Twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://whatsapp.com" target="_blank">
+                            <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://Telegram.com" target="_blank">
+                            <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                          </a>
+                        </li>
+                      </ul>
+
                     </div>
                   </div>
 
@@ -2037,22 +2345,35 @@
             <div class="Quotation-slider-content">
               <div class="share-container">
                 <i class="fa-solid fa-quote-right"></i>
-                <div class="share">
-                  <h4>شارك</h4>
-                  <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
-                  <div class="share-social-icons" class="social-icons">
-                    <a href="https://facebook.com" target="_blank">
-                      <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                      <img src="./imgs/twitter.png" alt="Twitter" />
-                    </a>
-                    <a href="https://whatsapp.com" target="_blank">
-                      <img src="./imgs/whatsapp.png" alt="Instagram" />
-                    </a>
-                    <a href="https://Telegram.com" target="_blank">
-                      <img src="./imgs/64px-Telegram_logo.svg.png" alt="LinkedIn" />
-                    </a>
+                <div class="share-article">
+                  <h4 class="btn-share">
+                    شارك
+                    <i class="fa-solid fa-share"></i>
+                  </h4>
+                  <div class="share-social-icons social-icons">
+                    <ul>
+                      <li>
+                        <a href="https://facebook.com" target="_blank">
+                          <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com" target="_blank">
+                          <img src="./imgs/twitter.png" alt="Twitter" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://whatsapp.com" target="_blank">
+                          <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://Telegram.com" target="_blank">
+                          <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                        </a>
+                      </li>
+                    </ul>
+
                   </div>
                 </div>
 
@@ -2123,11 +2444,11 @@
               </p>
 
               <div class="date-container">
-                <h3 class="date">
-                  <i class="fa-regular fa-calendar"></i>
+                <div class="date-article d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-calendar-days"></i>
                   12:06 م 09 ديسمبر 2024
-                </h3>
-                <h3 class="read-more">
+                </div>
+                <h3 class="btn btn-outline-primary read-more">
                   <a href="#">اقرأ المزيد</a>
                 </h3>
               </div>

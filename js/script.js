@@ -15,7 +15,18 @@ $(document).ready(function () {
     },
   });
 
-
+  // عند النقر على التبويبة
+  $(".buttons-group-tabs li").click(function() {
+    var tab = $(this).data("tab");
+    
+    // تغيير النمط النشط للتبويبات
+    $(".buttons-group-tabs li").removeClass("active");
+    $(this).addClass("active");
+    
+    // إخفاء جميع المحتويات وعرض المحتوى المقابل للتبويب
+    $(".tab-pane").hide();
+    $("." + tab).show();
+  });
  
   // Initialize sliders with configurations
   const sliderConfigs = [
@@ -378,7 +389,7 @@ document.addEventListener("DOMContentLoaded", function () {
           // تفعيل السلايدر
           $(`#slider-${city.query}`).owlCarousel({
             loop: true,
-            margin: 20,
+            margin: 10,
             nav: true,
             rtl: true,
             dots: false,
@@ -394,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 items: 1,
               },
               1000: {
-                items: 2,
+                items: 1.7,
               },
             },
           });

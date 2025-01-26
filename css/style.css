@@ -85,12 +85,23 @@ ul {
   list-style: none;
 }
 
+.btn-outline-primary {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.btn-outline-primary:hover {
+  background: var(--main-color);
+  border-color: var(--main-color);
+
+}
+
 .form-label {
   color: var(--text-color);
 }
 
 .form-control {
-  direction: rtl;
+
   background: #F4F4F4;
   padding: 10px 15px;
   color: var(--text-color);
@@ -156,7 +167,7 @@ ul {
   background-color: var(--main-color);
   padding: 5px 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   height: 40px;
   position: relative;
   left: 14px;
@@ -225,9 +236,7 @@ ul {
 
 .notifications-container {
   width: 400px;
-  margin: auto;
-  border-radius: 8px;
-  padding: 20px;
+
 }
 
 .notifications-header {
@@ -254,12 +263,12 @@ ul {
 
 .notification-item {
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 15px;
   margin-bottom: 15px;
   background-color: rgb(117 202 211 / 10%);
   /* 0.2 is the opacity */
-  direction: rtl;
+
   margin-top: 10px;
 }
 
@@ -275,8 +284,8 @@ ul {
 }
 
 .notification-text h6 {
-  font-size: 16px;
-  color: #333333;
+  font-size: 14px;
+  color: #4B4B4B;
 
   margin: 5px 0px;
 }
@@ -287,7 +296,8 @@ ul {
 }
 
 .notification-item p {
-  font-size: 16px;
+  color: #4B4B4B;
+  font-size: 12px;
 }
 
 .notification-read-more {
@@ -350,11 +360,12 @@ ul {
 .background-weather {
   padding: 10px;
   background-color: rgb(117 202 211 / 10%);
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
+.background-weather:last-child,
 .currency-mega-menu .background-currency:last-child {
   margin-bottom: 0;
 }
@@ -739,7 +750,7 @@ ul {
 .landing-left-text {}
 
 .left-text-card {
-  direction: rtl;
+
   margin-bottom: 0px;
   border-right: 5px solid #BFBFBF;
   transition: border-right 0.3s ease;
@@ -797,14 +808,6 @@ ul {
   grid-gap: 6px;
 }
 
-.date-container .read-more a {
-  color: var(--main-color);
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  line-height: 150%;
-}
 
 
 
@@ -870,10 +873,10 @@ ul {
 
 .toggle-menu-card {
   display: flex;
-  direction: rtl;
+
   font-family: "cairo";
   border: 1px solid #eeeeee;
-  border-radius: 8px;
+  border-radius: 12px;
   gap: 25px;
   margin-bottom: 20px;
 }
@@ -905,7 +908,7 @@ ul {
 .toggle-menu-podcast-card-top-line {
   display: flex;
   justify-content: space-between;
-  direction: rtl;
+
   padding: 10px 0px;
 }
 
@@ -932,7 +935,7 @@ ul {
 
 .toggle-menu-video {
   display: flex;
-  direction: rtl;
+
   gap: 15px;
   border: 1px solid #eeeeee;
   margin: 10px 0px;
@@ -941,7 +944,7 @@ ul {
 .toggle-menu-video h5 {
   font-size: 22px;
 
-  direction: rtl;
+
 }
 
 .toggle-menu-video-video img {
@@ -953,7 +956,7 @@ ul {
 }
 
 .toggle-menu-articls {
-  direction: rtl;
+
   border: 1px solid #eeeeee;
   border-radius: 12px;
   margin-bottom: 10px;
@@ -965,7 +968,7 @@ ul {
 }
 
 .toggle-menu-articls-content img {
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .toggle-menu-articls h6 {
@@ -1115,7 +1118,7 @@ ul {
   color: var(--text-color);
   font-size: 20px;
 
-  direction: rtl;
+
   padding-right: 22px;
   margin: 0px 0px 24px 0px;
   position: relative;
@@ -1190,7 +1193,7 @@ ul {
 .menu-control {
   display: flex;
   justify-content: space-between;
-  direction: rtl;
+
   padding-bottom: 4px;
   position: relative;
   border-bottom: 1px solid #b1b1b1cc;
@@ -1260,7 +1263,7 @@ ul {
   font-size: 16px;
   cursor: pointer;
   padding: 5px;
-  border-radius: 8px;
+  border-radius: 12px;
   width: 30px;
   height: 30px;
   -webkit-border-radius: 5px;
@@ -1294,7 +1297,7 @@ ul {
 
 .local-news-text,
 .local-news-second-section-text {
-  direction: rtl;
+
   align-self: center;
 }
 
@@ -1352,12 +1355,11 @@ ul {
 .local-news .date-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 20px 0;
 }
 
 .local-news-second-section-img img {
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 
@@ -1424,7 +1426,7 @@ ul {
 
 .share h4 {
   color: var(--main-color);
-  font-size: 16px;
+  font-size: 14px;
 
 }
 
@@ -1436,13 +1438,18 @@ ul {
   display: none;
   flex-direction: row;
   position: absolute;
-  top: 25px;
+  top: 30px;
   padding: 15px;
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 12px;
-  right: 0;
-
+  border-radius: 4px;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .share-social-icons.show {
@@ -1460,7 +1467,7 @@ ul {
 /* القائمه المخفيه*/
 .custom-card {
   margin: 0 auto;
-  direction: rtl;
+
 }
 
 .card .card-img-top img {
@@ -1509,7 +1516,7 @@ ul {
   justify-content: space-between;
   border: 1px solid #eeeeeeee;
   margin-bottom: 20px;
-  overflow: hidden;
+
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -1860,12 +1867,12 @@ ul {
   font-size: 20px;
   color: #212121;
   margin: 10px 0;
-  direction: rtl;
+
 
 }
 
 .quote-article-title {
-  direction: rtl;
+
   font-size: 16px;
 
   color: var(--text-color);
@@ -1955,7 +1962,7 @@ ul {
   font-size: 16px;
   color: var(--secondry-text-color);
   margin-bottom: 10px;
-  direction: rtl;
+
   font-weight: 500;
 }
 
@@ -1966,22 +1973,20 @@ ul {
 
 .read-more {
   font-size: 12px;
-  color: var(--main-color);
-  text-decoration: none;
-  display: inline-block;
+
 }
 
 .category-text {
   display: flex;
   gap: 20px;
-  direction: rtl;
+
 }
 
 .category-text p {
   color: var(--secondry-text-color);
   font-size: 16px;
 
-  direction: rtl;
+
   align-content: center;
 }
 
@@ -1989,7 +1994,7 @@ ul {
   color: var(--secondry-text-color);
   font-size: 12px;
   font-weight: 500;
-  direction: rtl;
+
 }
 
 .article-date {
@@ -2196,7 +2201,7 @@ ul {
 .local-news-header-controls {
   display: flex;
   justify-content: space-between;
-  direction: rtl;
+
   margin-top: 30px;
   padding-top: 20px;
   position: relative;
@@ -2273,7 +2278,7 @@ ul {
 }
 
 .slider-text {
-  direction: rtl;
+
   margin-top: 60px;
 }
 
@@ -2319,9 +2324,7 @@ ul {
   font-size: 14px;
 }
 
-.slider-content .read-more a {
-  margin-top: 10px;
-}
+
 
 @media (max-width: 768px) {
   .slider-text .slider-contant-header {
@@ -2430,7 +2433,7 @@ ul {
 
 .bottom-text-large-video {
   position: absolute;
-  direction: rtl;
+
   bottom: 0;
   right: 0;
   padding: 20px;
@@ -2478,14 +2481,14 @@ ul {
 
 .bottom-text-small-video-one {
   position: absolute;
-  direction: rtl;
+
   right: 15px;
   bottom: 15px;
 }
 
 .bottom-text-small-video-two {
   position: absolute;
-  direction: rtl;
+
   right: 0;
   bottom: 0;
   padding: 20px;
@@ -2507,7 +2510,7 @@ ul {
 .top-text {
   display: flex;
   justify-content: space-between;
-  direction: rtl;
+
   padding: 20px;
 }
 
@@ -2664,7 +2667,7 @@ ul {
   font-size: 16px;
 
   color: var(--text-color);
-  direction: rtl;
+
   position: relative;
   margin-right: 35px;
   margin-top: 20px;
@@ -2685,7 +2688,7 @@ ul {
   font-size: 20px;
 
   color: var(--dark-font);
-  direction: rtl;
+
   margin-right: 20px;
   margin-top: 10px;
 }
@@ -2716,7 +2719,7 @@ ul {
 .Quotation-slider-content {
   border: 1px solid #eeeeeeee;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 25px;
   margin: 10px;
   background-image: url(../imgs/fade-logo.png);
@@ -2776,7 +2779,7 @@ ul {
 }
 
 .Quotation-title {
-  direction: rtl;
+
   color: var(--text-color);
   font-size: 16px;
 
@@ -2932,7 +2935,7 @@ ul {
 }
 
 .article-card {
-  direction: rtl;
+
   border: 1px solid #ddd;
   border-radius: 16px;
   padding: 15px;
@@ -3103,7 +3106,7 @@ ul {
   align-items: center;
   position: relative;
   border: 1px solid #00a3c8;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 5px 10px;
   background-color: #fff;
   flex: 1;
@@ -3115,7 +3118,7 @@ ul {
   font-size: 12px;
   flex-grow: 1;
   color: #00a3c8;
-  direction: rtl;
+
 
 }
 
@@ -3441,7 +3444,7 @@ ul {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .small-card-last-news .left-section-card-text {
@@ -3454,8 +3457,8 @@ ul {
 }
 
 .small-card-last-news .left-section-img {
-  width: 80px;
-  height: 85px;
+  width: 90px;
+  height: 90px;
   overflow: hidden;
 }
 
@@ -3705,8 +3708,8 @@ ul {
 }
 
 .date-article {
-  font-size: 14px;
-  color: #757575;
+  font-size: 12px;
+  color: var(--secondry-text-color);
 }
 
 .share-article {
@@ -3744,13 +3747,13 @@ ul {
 
 .author-text .name {
   font-size: 12px;
-  color: #757575;
+  color: var(--secondry-text-color);
 
 }
 
 .author-text .title-job {
   font-size: 10px;
-  color: #757575;
+  color: var(--secondry-text-color);
 
 }
 
@@ -3798,7 +3801,7 @@ ul {
 }
 
 .description {
-  color: #757575;
+  color: var(--secondry-text-color);
   line-height: 24px;
   margin-bottom: 20px;
 }
@@ -3843,6 +3846,24 @@ ul {
 
   .flex-sms-column {
     flex-flow: column;
+  }
+
+  .owl-nav .owl-next {
+    left: 0;
+  }
+
+  .owl-nav .owl-prev {
+    right: 0;
+  }
+
+  .landing-left-text {
+    display: none;
+  }
+
+  .hero-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -3902,7 +3923,7 @@ ul {
 .weather-city-section {
   background: #f8f9fa;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -3962,4 +3983,41 @@ ul {
 
 .weather-slider {
   padding: 0 20px;
+}
+
+.buttons-group-tabs {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.buttons-group-tabs li {
+  font-size: 16px;
+  font-family: "Alexandria-SemiBold";
+  cursor: pointer;
+  position: relative;
+}
+
+.buttons-group-tabs li.active {
+  color: var(--main-color);
+
+}
+
+.buttons-group-tabs li.active::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--main-color);
+  right: 0;
+  bottom: -12px;
+}
+
+.tab-content>.tab-pane {
+  display: block;
 }
