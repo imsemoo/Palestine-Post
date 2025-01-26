@@ -14,21 +14,11 @@ $(document).ready(function () {
       1000: { items: 2 },
     },
   });
+
+
+ 
   // Initialize sliders with configurations
   const sliderConfigs = [
-    {
-      id: ".currency-slider",
-      options: {
-        loop: true,
-
-        nav: true,
-        dots: true,
-        rtl: true,
-        navText: ["«", ""],
-        responsive: { 0: { items: 1 }, 600: { items: 2 }, 1000: { items: 1 } },
-      },
-    },
-
     {
       id: "#slider1",
       options: {
@@ -242,4 +232,86 @@ $(document).ready(function () {
     const secs = Math.floor(seconds % 60);
     return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
   }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const apiKey = "48ef6fafed9643d1bfd1855cb6b9bc0f"; // مفتاح API الخاص بك
+  const apiUrl = `https://openexchangerates.org/api/latest.json?app_id=${apiKey}`;
+
+  // تحديث التاريخ والوقت
+  const updateDate = () => {
+    const dateElements = document.querySelectorAll(".date");
+    const now = new Date();
+    const timeString = now.toLocaleTimeString("ar-EG", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const dateString = now.toLocaleDateString("ar-EG");
+    dateElements.forEach(
+      (dateEl) => (dateEl.textContent = `${timeString} ${dateString}`)
+    );
+  };
+
+  // تحديث السلايدر بأسعار العملات
+  const updateSlider = (slider, baseRate, rates, baseCurrency) => {
+    const sliderContainer = document.querySelector(slider);
+    if (!sliderContainer) return;
+
+    sliderContainer.innerHTML = ""; // تفريغ السلايدر
+
+    Object.keys(rates).forEach((currency) => {
+      if (currency !== baseCurrency) {
+        const rate = (rates[currency] / baseRate).toFixed(3);
+        const slide = document.createElement("div");
+        slide.className = "item";
+        slide.innerHTML = `
+          <div class="currency">
+            <p>${currency}</p>
+            <span>${rate} ${currency}</span>
+          </div>
+        `;
+        sliderContainer.appendChild(slide);
+      }
+    });
+
+    // إعادة تهيئة السلايدر باستخدام OwlCarousel
+    $(slider).owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      rtl: true,
+      dots: false,
+      navText: [
+        "<i class='fa-solid fa-chevron-right'></i>",
+        "<i class='fa-solid fa-chevron-left'></i>",
+      ],
+      responsive: {
+        0: { items: 3 },
+        600: { items: 4 },
+        1000: { items: 4 },
+      },
+    });
+  };
+
+  // جلب البيانات من API
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.rates) {
+        const rates = data.rates;
+
+        // تحديث السلايدرز
+        updateSlider(".slider-usd", rates.USD, rates, "USD");
+        updateSlider(".slider-eur", rates.EUR, rates, "EUR");
+
+        // تحديث التاريخ والوقت
+        updateDate();
+      } else {
+        console.error("Failed to fetch currency rates:", data.error);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
 });
