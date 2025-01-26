@@ -307,14 +307,13 @@ ul {
 
 /* .weather-mega-menu قائمه الطقس start */
 
-.weather-mega-menu {
-  width: 500px;
-  height: 300px;
-  padding: 20px;
-}
 
 .weather-mega-menu-header {
   position: relative;
+}
+
+.weather-item p {
+  color: #4B4B4B;
 }
 
 .weather-mega-menu-header h4 {
@@ -347,14 +346,16 @@ ul {
   max-width: 600px;
 }
 
-.currency-mega-menu .background-currency {
+.currency-mega-menu .background-currency,
+.background-weather {
   padding: 10px;
   background-color: rgb(117 202 211 / 10%);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-.currency-mega-menu .background-currency:last-child{
+
+.currency-mega-menu .background-currency:last-child {
   margin-bottom: 0;
 }
 
@@ -399,9 +400,11 @@ ul {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
 }
-.currency-slider{
+
+.currency-slider {
   padding: 0 20px;
 }
+
 .currency p {
   font-size: 12px;
   margin: 0;
@@ -3862,16 +3865,18 @@ ul {
   height: 6px;
 }
 
-
+.weather-slider .owl-nav .owl-prev,
 .currency-slider .owl-nav .owl-prev {
   right: -5px;
 
 }
 
+.weather-slider .owl-nav .owl-next,
 .currency-slider .owl-nav .owl-next {
   left: -5px;
 }
 
+.weather-slider .owl-nav button,
 .currency-slider .owl-nav button {
 
   width: 20px;
@@ -3880,8 +3885,81 @@ ul {
   color: var(--text-color);
 
 }
-.currency-slider .owl-nav button  i{
+
+.weather-slider .owl-nav button i,
+.currency-slider .owl-nav button i {
   color: var(--text-color);
   font-size: 12px;
 
+}
+
+
+
+.weather-slider .owl-item img {
+  width: auto;
+}
+
+.weather-city-section {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather-city-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.weather-city-header h5 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.weather-city-header .date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.weather-city-content {
+  display: flex;
+  align-items: center;
+}
+
+.weather-item img {
+  width: 50px !important;
+  height: auto;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+.weather-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  grid-gap: 15px;
+}
+
+.weather-item p,
+.temperature,
+.description-weather {
+  font-size: 12px;
+  line-height: 130%;
+  text-wrap-mode: nowrap;
+}
+
+.weather-item span {
+  display: block;
+}
+
+.weather-slider {
+  padding: 0 20px;
 }

@@ -315,3 +315,91 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Error fetching data:", error);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const apiKey = "4e1c311a82984f5686d131632252601"; // مفتاح API الخاص بك
+  const apiUrl = "https://api.weatherapi.com/v1/forecast.json"; // تعديل API للحصول على التوقعات اليومية
+  const cities = [
+    { name: "غزة", query: "Gaza" },
+    { name: "القدس", query: "Jerusalem" },
+  ];
+  const weatherSlidersContainer = document.querySelector(".weather-sliders");
+  const today = new Date();
+
+  // تحديث التاريخ الحالي
+  const formattedDate = today.toLocaleDateString("ar-EG", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  // جلب بيانات الطقس لكل مدينة
+  cities.forEach((city) => {
+    fetch(`${apiUrl}?key=${apiKey}&q=${city.query}&days=5&lang=ar`) // طلب بيانات الأيام القادمة
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          // إنشاء قسم جديد لكل مدينة
+          const citySection = document.createElement("div");
+          citySection.classList.add("background-weather");
+          citySection.innerHTML = `
+            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+              <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                <div class="dot-title red-dot"></div>
+                <h5>${city.name}</h5>
+              </div>
+              <div class="date">${formattedDate}</div>
+            </header>
+            <div class="owl-carousel weather-slider owl-theme" id="slider-${city.query}">
+              <!-- سيتم تعبئة بيانات الطقس هنا -->
+            </div>
+          `;
+          weatherSlidersContainer.appendChild(citySection);
+
+          // تعبئة بيانات الطقس في السلايدر
+          const weatherSlider = citySection.querySelector(`#slider-${city.query}`);
+          data.forecast.forecastday.forEach((forecast) => {
+            const weatherItem = document.createElement("div");
+            weatherItem.classList.add("item");
+            const forecastDate = new Date(forecast.date);
+            const dayName = forecastDate.toLocaleDateString("ar-EG", { weekday: "long" });
+            weatherItem.innerHTML = `
+              <div class="weather-item">
+                <p>${dayName} <span>${forecast.date}</span></p>
+                <img src="${forecast.day.condition.icon}" alt="${forecast.day.condition.text}">
+                <span class="description-weather">${forecast.day.condition.text}</span>
+                <span class="temperature">${Math.round(forecast.day.avgtemp_c)}°C</span>
+              </div>
+            `;
+            weatherSlider.appendChild(weatherItem);
+          });
+
+          // تفعيل السلايدر
+          $(`#slider-${city.query}`).owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            rtl: true,
+            dots: false,
+            navText: [
+              "<i class='fa-solid fa-chevron-right'></i>",
+              "<i class='fa-solid fa-chevron-left'></i>",
+            ],
+            responsive: {
+              0: {
+                items: 1,
+              },
+              600: {
+                items: 1,
+              },
+              1000: {
+                items: 2,
+              },
+            },
+          });
+        }
+      })
+      .catch((error) => console.error("Error fetching weather data:", error));
+  });
+});
