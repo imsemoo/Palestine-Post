@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فلسطين بوست</title>
+    <!-- Meta Description -->
+    <meta name="description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط، توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords"
+        content="فلسطين بوست, أخبار الشرق الأوسط, الأسرى الفلسطينيون, حقوق الإنسان, حماس, الاحتلال, العدالة, توثيق الانتهاكات, فلسطين, السجون" />
+
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="فلسطين بوست" />
+    <meta property="og:description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط، توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+    <meta property="og:image" content="img/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="فلسطين بوست" />
+    <meta name="twitter:description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط، توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+    <meta name="twitter:image" content="img/twitter-image.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/header logo.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wavesurfer.js@6.2.0/dist/wavesurfer.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <!-- top-bar-start -->
+        <div class="top-bar ">
+            <div class="container">
+                <div class="top-bar-container">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <div class="top-bar-input">
+
+                        <input class="search-input" placeholder="بحث عن.." />
+                        <button class="top-bar-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="left-icons">
+                        <div class="icon-container">
+                            <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" />
+                            <div class="curancy-mega-menu">
+                                <div class="mega-menu-content">
+                                    <h2 class="currency-mega-menu-title">الطقس</h2>
+                                    <div class="currency-mega-menu">
+
+                                        <!-- First Slider: الدولار اليوم -->
+                                        <div class="background-currency">
+                                            <header
+                                                class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                <div
+                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                    <div class="dot-title red-dot"></div>
+                                                    <h5>الدولار اليوم</h5>
+                                                </div>
+                                                <div class="date"></div>
+                                            </header>
+                                            <div class="owl-carousel slider-usd owl-theme currency-slider"></div>
+                                        </div>
+
+                                        <!-- Second Slider: اليورو اليوم -->
+                                        <div class="background-currency">
+                                            <header
+                                                class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                <div
+                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                    <div class="dot-title red-dot"></div>
+                                                    <h5>اليورو اليوم</h5>
+                                                </div>
+                                                <div class="date"></div>
+                                            </header>
+                                            <div class="owl-carousel slider-eur owl-theme currency-slider"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="v-line"></div>
+
+                        <div class="icon-container">
+                            <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" />
+                            <div class="weather-mega-menu curancy-mega-menu">
+                                <div class="mega-menu-content">
+                                    <h2 class="weather-mega-menu-title currency-mega-menu-title">الطقس</h2>
+                                    <div class="weather-sliders">
+                                        <!-- Slider for Weather Data -->
+
+                                        <div class="owl-carousel weather-slider owl-theme">
+                                            <!-- سيتم تعبئة البيانات ديناميكيًا هنا -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v-line"></div>
+                        <div class="icon-container">
+                            <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" />
+                            <div class="notifications-mega-menu">
+                                <!-- Mega Menu Content for Notification -->
+                                <div class="mega-menu-content">
+                                    <div class="notifications-container">
+                                        <h2 class="notifications-header currency-mega-menu-title">اشعارات</h2>
+                                        <div class="notification-item">
+                                            <div class="notification-header">
+                                                <header
+                                                    class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                    <div
+                                                        class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                        <div class="dot-title red-dot"></div>
+                                                        <h5>غزة </h5>
+                                                    </div>
+                                                    <div class="date"></div>
+                                                </header>
+                                                <div class="notification-text">
+                                                    <h6>قطاع المياه في غزة</h6>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                اليومية وارتفاع في التلوث.
+                                            </p>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="notification-header">
+                                                <header
+                                                    class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                    <div
+                                                        class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                        <div class="dot-title red-dot"></div>
+                                                        <h5>غزة </h5>
+                                                    </div>
+                                                    <div class="date"></div>
+                                                </header>
+                                                <div class="notification-text">
+                                                    <h6>قطاع المياه في غزة</h6>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                اليومية وارتفاع في التلوث.
+                                            </p>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="notification-header">
+                                                <header
+                                                    class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                    <div
+                                                        class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                        <div class="dot-title red-dot"></div>
+                                                        <h5>غزة </h5>
+                                                    </div>
+                                                    <div class="date"></div>
+                                                </header>
+                                                <div class="notification-text">
+                                                    <h6>قطاع المياه في غزة</h6>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                اليومية وارتفاع في التلوث.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- top-bar-end -->
+
+        <!-- nav-bar-start -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <div class="d-flex align-items-center py-3 gap-2">
+                    <button class="navbar-toggler pt-2 " type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
+                    </button>
+                    <!-- Input field for mobile screens -->
+                    <input type="text" class="form-control d-lg-none " style="max-width: 450px" dir="rtl"
+                        placeholder="ابحث عن....." />
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link custom-hover" id="local-news-toggle" href="#">
+                                أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                            </a>
+                            <div class="mega-menu" id="local-news-slide-menu">
+                                <div class="menu-container">
+                                    <div class="menu-item">
+                                        <h3>القدس</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>غزة</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>نابلس</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>الخليل</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>رام الله</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>طولكرم</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>بيت لحم</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>قلقيلية</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>الداخل المحتل</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>أريحا</h3>
+                                        <ul>
+                                            <li>خبر الأول للمنطقة</li>
+                                            <li>خبر الثاني للمنطقة</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">تقارير بوست</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">مقالات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">بودكاست</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">عربي دولي</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">فيديو</a>
+                        </li>
+                        <li class="nav-item dropdown" id="more-mega-menu">
+                            <a class="nav-link custom-hover" href="#">
+                                الـمزيــد<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                            </a>
+                            <div class="mega-menu" id="mega-menu">
+                                <div class="mega-menu-column">
+                                    <h3>الـمزيــد</h3>
+                                    <a href="#">اتصل بنا</a>
+                                    <a href="#">من نحن</a>
+                                    <a href="#">ارسل خبر</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="#">ارسل خبر</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- nav-bar-end -->
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-between">
+                    <h4 class="title-breadcrumb">فيـديو </h4>
+
+                    <ul class="list-breadcrumb">
+                        <li>
+                            الرئيسية
+                        </li>
+                        <li>
+                            <span>|</span>
+                        </li>
+                        <li class="active">
+                            <a href="#">فيـديو </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="filter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <!-- Search Input -->
+                    <div class="filter-item">
+                        <input type="text" class="filter-input" placeholder="بحث عن النتائج" />
+                        <i class="fa fa-search"></i>
+                    </div>
+
+                    <!-- Select Category -->
+                    <div class="filter-item">
+                        <select class="filter-select">
+                            <option value="">التصنيف</option>
+                            <option value="category1">التصنيف 1</option>
+                            <option value="category2">التصنيف 2</option>
+                        </select>
+                    </div>
+
+                    <!-- Date From -->
+                    <div class="filter-item">
+                        <input type="date" class="filter-date" placeholder="التاريخ من" />
+                    </div>
+
+                    <!-- Date To -->
+                    <div class="filter-item">
+                        <input type="date" class="filter-date" placeholder="التاريخ إلى" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-videos">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!-- Main Video -->
+                    <div class="d-flex">
+
+                    </div>
+                    <div class="video-container" onclick="playVideo(this)">
+                        <img src="https://dummyimage.com/800x400/dddddd/000000/" alt="Main Video">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay"></iframe>
+                    </div>
+                    <div class="news-details mt-3">
+                        <div class="card-title">
+                            <h4 class="card-title-with-dot">أخبار محلية</h4>
+
+                            <div class="share-article">
+                                <h4 class="btn-share">
+                                    شارك
+                                    <i class="fa-solid fa-share"></i>
+                                </h4>
+                                <div class="share-social-icons social-icons">
+                                    <ul>
+                                        <li>
+                                            <a href="https://facebook.com" target="_blank">
+                                                <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com" target="_blank">
+                                                <img src="./imgs/twitter.png" alt="Twitter" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://whatsapp.com" target="_blank">
+                                                <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://Telegram.com" target="_blank">
+                                                <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="date">
+                            <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                            12:06 م 09 ديسمبر 2024
+                        </p>
+                        <h4 class="title-video">توافد أهالي الداخل إلى جنين لدعم السوق المحلي بعد إعادة فتح معبر الجلمة
+                            بعد إغلاق دام أكثر من عام</h4>
+                    </div>
+
+                </div>
+                <!-- Side Videos -->
+                <div class="col-md-5">
+                    <div class="d-flex mb-3  small-video-side">
+                        <div class="video-container " onclick="playVideo(this)">
+                            <img src="https://dummyimage.com/200x140/dddddd/000000/" alt="Side Video 1">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay"></iframe>
+                        </div>
+                        <div class="news-details">
+                            <div class="card-title">
+                                <h4 class="card-title-with-dot">أخبار محلية</h4>
+
+                                <div class="share-article">
+                                    <h4 class="btn-share">
+                                        شارك
+                                        <i class="fa-solid fa-share"></i>
+                                    </h4>
+                                    <div class="share-social-icons social-icons">
+                                        <ul>
+                                            <li>
+                                                <a href="https://facebook.com" target="_blank">
+                                                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com" target="_blank">
+                                                    <img src="./imgs/twitter.png" alt="Twitter" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://whatsapp.com" target="_blank">
+                                                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://Telegram.com" target="_blank">
+                                                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="date">
+                                <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                12:06 م 09 ديسمبر 2024
+                            </p>
+                            <h4 class="title-video-small">المتحدث باسم الدفاع المدني...</h4>
+
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3  small-video-side">
+                        <div class="video-container " onclick="playVideo(this)">
+                            <img src="https://dummyimage.com/200x140/dddddd/000000/" alt="Side Video 1">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay"></iframe>
+                        </div>
+                        <div class="news-details">
+                            <div class="card-title">
+                                <h4 class="card-title-with-dot">أخبار محلية</h4>
+
+                                <div class="share-article">
+                                    <h4 class="btn-share">
+                                        شارك
+                                        <i class="fa-solid fa-share"></i>
+                                    </h4>
+                                    <div class="share-social-icons social-icons">
+                                        <ul>
+                                            <li>
+                                                <a href="https://facebook.com" target="_blank">
+                                                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com" target="_blank">
+                                                    <img src="./imgs/twitter.png" alt="Twitter" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://whatsapp.com" target="_blank">
+                                                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://Telegram.com" target="_blank">
+                                                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="date">
+                                <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                12:06 م 09 ديسمبر 2024
+                            </p>
+                            <h4 class="title-video-small">المتحدث باسم الدفاع المدني...</h4>
+
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3  small-video-side">
+                        <div class="video-container " onclick="playVideo(this)">
+                            <img src="https://dummyimage.com/200x140/dddddd/000000/" alt="Side Video 1">
+                            <button class="play-button">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay"></iframe>
+                        </div>
+                        <div class="news-details">
+                            <div class="card-title">
+                                <h4 class="card-title-with-dot">أخبار محلية</h4>
+
+                                <div class="share-article">
+                                    <h4 class="btn-share">
+                                        شارك
+                                        <i class="fa-solid fa-share"></i>
+                                    </h4>
+                                    <div class="share-social-icons social-icons">
+                                        <ul>
+                                            <li>
+                                                <a href="https://facebook.com" target="_blank">
+                                                    <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com" target="_blank">
+                                                    <img src="./imgs/twitter.png" alt="Twitter" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://whatsapp.com" target="_blank">
+                                                    <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://Telegram.com" target="_blank">
+                                                    <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="date">
+                                <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                12:06 م 09 ديسمبر 2024
+                            </p>
+                            <h4 class="title-video-small">المتحدث باسم الدفاع المدني...</h4>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="container all-articles">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="news-card-content">
+                        <div class="news-card-img">
+                            <!-- Added alt text for SEO and accessibility -->
+                            <img src="https://dummyimage.com/400x220/dddddd/000000/" loading="lazy" class="img-fluid"
+                                alt="Image of Israeli military officer statement" />
+                        </div>
+                        <div class="news-card-text">
+                            <span class="local-news-title">اخبار محلية</span>
+                            <span class="local-news-small-title">غزة</span>
+                            <h2>
+                                ضابط في جيش الاحتلال: لن نصل إلى آخر صاروخ لدى حماس حتى لو
+                                حاربناها 20 عاما
+                            </h2>
+
+                            <p>
+                                صرح ضابط كبير في جيش الاحتلال الاسرائيلي للقناه ١٢ العبريه
+                                اليوم الاحد بان"اسرائيل" لن تنجح بالوصول الي اخر صاروخ
+                                تمتلكه حركه "حماس" حتي لو ظلت تحاربها ٢٠ عاما في غزة
+                            </p>
+
+                            <div class="date-container">
+                                <p class="date">
+                                    12:06 م 09 ديسمبر 2024
+                                    <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                </p>
+
+                                <a href="#" title="Read more about the Israeli military officer's statement"
+                                    class="read-more">
+                                    اقرا المزيد
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </div>
+
+                            <div class="share">
+                                <h4>شارك</h4>
+                                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                                <div class="share-social-icons social-icons">
+                                    <a href="https://facebook.com" target="_blank">
+                                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                    </a>
+                                    <a href="https://twitter.com" target="_blank">
+                                        <img src="./imgs/twitter.png" alt="Twitter" />
+                                    </a>
+                                    <a href="https://whatsapp.com" target="_blank">
+                                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                    </a>
+                                    <a href="https://Telegram.com" target="_blank">
+                                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="news-card-content">
+                        <div class="news-card-img">
+                            <!-- Added alt text for SEO and accessibility -->
+                            <img src="https://dummyimage.com/400x220/dddddd/000000/" loading="lazy" class="img-fluid"
+                                alt="Image of Israeli military officer statement" />
+                        </div>
+                        <div class="news-card-text">
+                            <span class="local-news-title">اخبار محلية</span>
+                            <span class="local-news-small-title">غزة</span>
+                            <h2>
+                                ضابط في جيش الاحتلال: لن نصل إلى آخر صاروخ لدى حماس حتى لو
+                                حاربناها 20 عاما
+                            </h2>
+
+                            <p>
+                                صرح ضابط كبير في جيش الاحتلال الاسرائيلي للقناه ١٢ العبريه
+                                اليوم الاحد بان"اسرائيل" لن تنجح بالوصول الي اخر صاروخ
+                                تمتلكه حركه "حماس" حتي لو ظلت تحاربها ٢٠ عاما في غزة
+                            </p>
+
+                            <div class="date-container">
+                                <h3 class="date">
+                                    12:06 م 09 ديسمبر 2024
+                                    <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                </h3>
+
+                                <a href="#" title="Read more about the Israeli military officer's statement"
+                                    class="read-more">
+                                    اقرا المزيد
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </div>
+
+                            <div class="share">
+                                <h4>شارك</h4>
+                                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                                <div class="share-social-icons social-icons">
+                                    <a href="https://facebook.com" target="_blank">
+                                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                    </a>
+                                    <a href="https://twitter.com" target="_blank">
+                                        <img src="./imgs/twitter.png" alt="Twitter" />
+                                    </a>
+                                    <a href="https://whatsapp.com" target="_blank">
+                                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                    </a>
+                                    <a href="https://Telegram.com" target="_blank">
+                                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="news-card">
+                    <div class="news-card-content">
+                        <div class="news-card-img">
+                            <!-- Added alt text for SEO and accessibility -->
+                            <img src="https://dummyimage.com/400x220/dddddd/000000/" loading="lazy" class="img-fluid"
+                                alt="Image of Israeli military officer statement" />
+                        </div>
+                        <div class="news-card-text">
+                            <span class="local-news-title">اخبار محلية</span>
+                            <span class="local-news-small-title">غزة</span>
+                            <h2>
+                                ضابط في جيش الاحتلال: لن نصل إلى آخر صاروخ لدى حماس حتى لو
+                                حاربناها 20 عاما
+                            </h2>
+
+                            <p>
+                                صرح ضابط كبير في جيش الاحتلال الاسرائيلي للقناه ١٢ العبريه
+                                اليوم الاحد بان"اسرائيل" لن تنجح بالوصول الي اخر صاروخ
+                                تمتلكه حركه "حماس" حتي لو ظلت تحاربها ٢٠ عاما في غزة
+                            </p>
+
+                            <div class="date-container">
+                                <h3 class="date">
+                                    12:06 م 09 ديسمبر 2024
+                                    <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
+                                </h3>
+
+                                <a href="#" title="Read more about the Israeli military officer's statement"
+                                    class="read-more">
+                                    اقرا المزيد
+                                    <i class="fa-solid fa-angles-left"></i>
+                                </a>
+                            </div>
+
+                            <div class="share">
+                                <h4>شارك</h4>
+                                <img src="./imgs/share-arrow.png" alt="Share icon" loading="lazy" class="share-arrow" />
+                                <div class="share-social-icons social-icons">
+                                    <a href="https://facebook.com" target="_blank">
+                                        <img src="./imgs/64px-2021_Facebook_icon.svg.png" alt="Facebook" />
+                                    </a>
+                                    <a href="https://twitter.com" target="_blank">
+                                        <img src="./imgs/twitter.png" alt="Twitter" />
+                                    </a>
+                                    <a href="https://whatsapp.com" target="_blank">
+                                        <img src="./imgs/whatsapp.png" alt="WhatsApp" />
+                                    </a>
+                                    <a href="https://Telegram.com" target="_blank">
+                                        <img src="./imgs/64px-Telegram_logo.svg.png" alt="Telegram" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <!-- Previous Link -->
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                    class="fa-solid fa-angles-right"></i></a>
+                        </li>
+
+                        <!-- Page 3 -->
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                        <!-- Page 5 (Active) -->
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">5</a>
+                        </li>
+
+                        <!-- Page 7 -->
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+
+                        <!-- Page 8 -->
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+
+                        <!-- Page 10 -->
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+
+                        <!-- Next Link -->
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="fa-solid fa-angles-left"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 about-us-footer">
+                    <img class="footer-logo" src="./imgs/footer logo.png" alt="Footer Logo" />
+                    <p>
+                        فلسطين بوست منبرا اعلاميا جديدا, تعطي حيزا <br />
+                        كبيرا للمواطن في صناعه الحدث الاعلامي, <br />
+                        وتقدم مضمونا يجمع اهداف الاعلام.
+                    </p>
+                </div>
+                <div class="col-md-3 tags-footer">
+                    <h4>تصنيفــات</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 tags-footer">
+                    <h4>الوسوم</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 tags-footer">
+                    <h4>الوسوم</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resrved-rights-bar">
+            <div class="container">
+                <div class="resrved-rights-container">
+                    <p>جميع الحقوق محفوظة فلسطين بوست 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scroll -->
+    <div id="scrollToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

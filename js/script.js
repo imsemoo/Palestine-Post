@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // تحديث التاريخ والوقت
   const updateDate = () => {
-    const dateElements = document.querySelectorAll(".date");
+    const dateElements = document.querySelectorAll(".date-slider");
     const now = new Date();
     const timeString = now.toLocaleTimeString("ar-EG", {
       hour: "2-digit",
@@ -414,3 +414,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => console.error("Error fetching weather data:", error));
   });
 });
+
+function playVideo(container) {
+  const img = container.querySelector('img');
+  const button = container.querySelector('.play-button');
+  const iframe = container.querySelector('iframe');
+  img.style.display = 'none';
+  button.style.display = 'none';
+  iframe.style.display = 'block';
+}
