@@ -71,7 +71,7 @@ $(document).ready(function () {
       options: {
         loop: true,
         rtl: true,
-        margin: 0,
+        margin: 20,
         nav: true,
         navText: [
           "<i class='fa-solid fa-chevron-right'></i>",
