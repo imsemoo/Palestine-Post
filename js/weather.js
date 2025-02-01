@@ -21,7 +21,7 @@ $(document).ready(function() {
     const megaMenu = $(this).find('.weather-mega-menu');
     
     // إخفاء أي قوائم أخرى مفتوحة
-    $(".mega-menu").not(megaMenu).hide();
+    $(".top-bar-container .mega-menu").not(megaMenu).hide();
 
     // التحقق إذا كانت البيانات قد تم جلبها مسبقًا
     if (!megaMenu.data('loaded')) {

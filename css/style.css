@@ -1585,10 +1585,10 @@ ul {
   color: var(--text-color);
 }
 
-.news-card-text p {
+.news-card-text > p {
   font-size: 14px;
   color: var(--secondry-text-color);
-  margin: 15px 0;
+  margin: 10px 0;
 
 }
 
@@ -4184,7 +4184,6 @@ ul {
   border: 1px solid #eee;
   height: 100%;
   background: white;
-  margin-top: 50px;
   height: max-content;
 
 }
