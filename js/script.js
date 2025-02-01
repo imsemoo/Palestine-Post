@@ -222,6 +222,40 @@ $(document).ready(function () {
     const secs = Math.floor(seconds % 60)
     return `${minutes}:${secs.toString().padStart(2, '0')}`
   }
+
+
+   // إغلاق قائمة الإشعارات عند النقر في أي مكان خارجها
+   $(document).on('click', function() {
+    $('.notifications-mega-menu').hide();
+  });
+  
+  // منع إخفاء القائمة عند النقر داخل القائمة نفسها
+  $(document).on('click', '.notifications-mega-menu', function(e) {
+    e.stopPropagation();
+  });
+
+  // عند النقر على أيقونة الإشعارات
+  $('.notifications-mega-menu').closest('.icon-container').on('click', function(e) {
+    e.stopPropagation();
+    
+    const notificationMenu = $(this).find('.notifications-mega-menu');
+
+    // إخفاء أي قوائم أخرى (Mega Menus) مفتوحة
+    $(".top-bar-container .mega-menu").not(notificationMenu).hide();
+
+    // التأكد من وجود إشعارات، وإن لم توجد نضع رسالة "لا يوجد إشعارات"
+    const notificationItems = notificationMenu.find('.notification-item');
+    if (notificationItems.length === 0) {
+      const container = notificationMenu.find('.notifications-container');
+      // تأكد أننا لم نضف الرسالة من قبل
+      if (!container.find('.no-notifications-msg').length) {
+        container.html('<p class="no-notifications-msg">لا يوجد إشعارات</p>');
+      }
+    }
+
+    // فتح/إغلاق القائمة
+    notificationMenu.toggle();
+  });
 });
 
 
