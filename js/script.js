@@ -1,27 +1,27 @@
 $(document).ready(function () {
 
  // On load, set the accordion background from its data attribute
- var aBgimage = $('.accordion').data('background');
- $('.accordion').css('background-image', 'url('+aBgimage+')');
+ var aBgimage = $('.files-accordion').data('background');
+ $('.files-accordion').css('background-image', 'url('+aBgimage+')');
  
- $('.section').on('click', function(e){
+ $('.article-files').on('click', function(e){
    if( $(this).hasClass('open') ){
      e.stopPropagation();
-     $('.accordion').removeClass('enabled')
-     $('.section').removeClass('open')
+     $('.files-accordion').removeClass('enabled')
+     $('.article-files').removeClass('open')
    } else {
-     $(this).parent('.accordion').addClass('enabled')
+     $(this).parent('.files-accordion').addClass('enabled')
      $(this).addClass('open')
-     $(this).siblings('.section').removeClass('open')
+     $(this).siblings('.article-files').removeClass('open')
      var bGimage = $(this).data('background')
-     $('.accordion').css('background-image', 'url('+bGimage+')');
+     $('.files-accordion').css('background-image', 'url('+bGimage+')');
    }
  })
  
  $('.close').on('click', function(e){
    e.stopPropagation();
-   $('.accordion').removeClass('enabled')
-   $('.section').removeClass('open')
+   $('.files-accordion').removeClass('enabled')
+   $('.article-files').removeClass('open')
  })
   $(".owl-news").owlCarousel({
     loop: true,
