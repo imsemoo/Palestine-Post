@@ -183,45 +183,74 @@ $(document).ready(function () {
   
 
   document.querySelectorAll('.audio-player').forEach((container) => {
+    // Create WaveSurfer instance for each audio player container
     const wavesurfer = WaveSurfer.create({
       container: container.querySelector('.waveform-ph'),
       waveColor: '#E0E0E0',
       progressColor: '#33B3C0',
       height: 20,
       responsive: true,
-    })
+    });
   
-    const audioPath = container.querySelector('.waveform-ph').dataset.audio
-    wavesurfer.load(audioPath)
+    // Load the audio file from the data attribute
+    const audioPath = container.querySelector('.waveform-ph').dataset.audio;
+    wavesurfer.load(audioPath);
   
-    const playPauseButton = container.querySelector('.play-pause')
-    const timeDisplay = container.querySelector('.time-display')
+    // Get control buttons and time display element
+    const playPauseButton = container.querySelector('.play-pause');
+    const rewindButton = container.querySelector('.rewind');
+    const forwardButton = container.querySelector('.forward');
+    const timeDisplay = container.querySelector('.time-display');
   
-    // تشغيل/إيقاف مع تحديث الأيقونة
+    // Play/Pause toggle with icon update
     playPauseButton.addEventListener('click', () => {
-      wavesurfer.playPause()
-      playPauseButton.innerHTML = wavesurfer.isPlaying() ? '⏸' : '▶'
-    })
+      wavesurfer.playPause();
+      playPauseButton.innerHTML = wavesurfer.isPlaying() ? '⏸' : '▶';
+    });
   
-    // تحديث الوقت أثناء التشغيل
+    // Rewind 10 seconds
+    rewindButton.addEventListener('click', () => {
+      const currentTime = wavesurfer.getCurrentTime();
+      let newTime = currentTime - 10;
+      if (newTime < 0) newTime = 0;
+      const duration = wavesurfer.getDuration();
+      if (duration > 0) {
+        wavesurfer.seekTo(newTime / duration);
+      }
+    });
+  
+    // Forward 10 seconds
+    forwardButton.addEventListener('click', () => {
+      const currentTime = wavesurfer.getCurrentTime();
+      let newTime = currentTime + 10;
+      const duration = wavesurfer.getDuration();
+      if (newTime > duration) newTime = duration;
+      if (duration > 0) {
+        wavesurfer.seekTo(newTime / duration);
+      }
+    });
+  
+    // Update the time display during audio processing
     wavesurfer.on('audioprocess', () => {
-      const currentTime = wavesurfer.getCurrentTime()
-      const duration = wavesurfer.getDuration()
-      timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`
-    })
+      const currentTime = wavesurfer.getCurrentTime();
+      const duration = wavesurfer.getDuration();
+      timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+    });
   
-    // تعيين الوقت الابتدائي عند التحميل
+    // Set the initial time display when the audio is ready
     wavesurfer.on('ready', () => {
-      const duration = wavesurfer.getDuration()
-      timeDisplay.textContent = `${formatTime(0)} / ${formatTime(duration)}`
-    })
-  })
+      const duration = wavesurfer.getDuration();
+      timeDisplay.textContent = `${formatTime(0)} / ${formatTime(duration)}`;
+    });
+  });
   
+  // Format seconds to MM:SS
   function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60)
-    const secs = Math.floor(seconds % 60)
-    return `${minutes}:${secs.toString().padStart(2, '0')}`
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs.toString().padStart(2, '0')}`;
   }
+  
 
 
    // إغلاق قائمة الإشعارات عند النقر في أي مكان خارجها

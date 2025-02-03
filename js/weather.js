@@ -1,11 +1,11 @@
 $(document).ready(function() {
   // إغلاق أي قائمة مفتوحة عند النقر في أي مكان خارجها
   $(document).on('click', function() {
-    $('.mega-menu').hide();
+    $('.top-bar-container .mega-menu').hide();
   });
 
   // منع إغلاق القائمة عند النقر داخلها
-  $(document).on('click', '.mega-menu', function(e) {
+  $(document).on('click', '.top-bar-container .mega-menu', function(e) {
     e.stopPropagation();
   });
 

@@ -627,8 +627,11 @@ ul {
 .menu-item h3 {
   font-size: 16px;
   color: var(--text-color);
-  margin-bottom: 10px;
   text-align: start;
+
+}
+.menu-item > .title-with-circle{
+  margin-bottom: 10px;
 
 }
 
@@ -636,6 +639,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: start;
 }
 
 .menu-item ul li a h5,
@@ -3397,7 +3401,7 @@ ul {
 .hero-news {
   overflow: hidden;
   position: relative;
-  height: 450px;
+  height: 350px;
 }
 
 .hero-news img {
@@ -3546,7 +3550,7 @@ ul {
 
 }
 
-.list-social-media .item.facebook:hover {
+.list-social-media .item.telegram:hover {
   background: rgba(167, 202, 243, 0.3);
   color: #59A8E3;
 
@@ -3818,51 +3822,45 @@ ul {
 }
 
 .dot-title {
-  width: 10px;
-  height: 10px;
+  width: 8px;  /* Adjusted width to 8px */
+  height: 8px; /* Adjusted height to 8px */
   background: var(--main-color);
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   position: relative;
-
 }
 
+/* Basic pulse effect */
 .dot-title::after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 100%;  /* Inherits the 8px size */
   height: 100%;
   border-radius: 50%;
   background-color: var(--main-color);
   animation: pulse 1.5s infinite;
   z-index: 1;
+  right: 0;
 }
 
 /* Red dot styling */
 .red-dot {
-
   background-color: #BB3F2C;
 }
 
-/* Pulse effect animation */
+/* Pulse effect animation keyframes */
 @keyframes pulse {
   0% {
     transform: scale(0.8);
     opacity: 0.7;
   }
-
   50% {
-    transform: scale(2.5);
+    transform: scale(1.8);
     opacity: 0.4;
-    -webkit-transform: scale(2.5);
-    -moz-transform: scale(2.5);
-    -ms-transform: scale(2.5);
-    -o-transform: scale(2.5);
-  }
-
+    -webkit-transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    -o-transform: scale(1.8);
+}
   100% {
     transform: scale(1);
     opacity: 0.7;
@@ -3870,21 +3868,22 @@ ul {
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
-  }
+}
 }
 
-/* Circular wave effect */
+/* Circular wave effect for red dot */
 .red-dot::after {
   content: '';
   position: absolute;
   width: 100%;
-  right: 0;
   height: 100%;
   border-radius: 50%;
   background-color: #BB3F2C;
   animation: pulse 1.5s infinite;
   z-index: -1;
+  right: 0;
 }
+
 
 .tags li a {
   border: 1px solid var(--main-color);
@@ -3946,8 +3945,8 @@ ul {
 }
 
 .title-with-circle-small .dot-title {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 .weather-slider .owl-nav .owl-prev,
@@ -4392,4 +4391,20 @@ ul {
     width: 150px;
 }.card .card-img-top .phone-img {
   width: 50px;}
+}
+
+.image-not{
+  width: 60px;
+  height: 60px;
+}
+
+.image-not img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-noti{
+  flex: 1
+  ;
 }

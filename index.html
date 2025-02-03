@@ -49,22 +49,26 @@
     <div class="top-bar">
       <div class="container">
         <div class="top-bar-container">
+          <!-- Logo Section with explicit dimensions -->
           <div class="logo">
             <a href="#">
-              <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" />
+              <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" width="150" height="50" />
             </a>
           </div>
 
+          <!-- Search Input Section -->
           <div class="top-bar-input">
-
             <input class="search-input" placeholder="بحث عن.." />
             <button class="top-bar-btn">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
+
+          <!-- Left Icons Section -->
           <div class="left-icons">
+            <!-- Currency Icon & Mega Menu -->
             <div class="icon-container">
-              <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" />
+              <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" width="32" height="32" />
               <div class="curancy-mega-menu mega-menu">
                 <div class="loading-overlay">
                   <div class="loading-spinner"></div>
@@ -72,7 +76,6 @@
                 <div class="mega-menu-content">
                   <h2 class="currency-mega-menu-title">العملات</h2>
                   <div class="currency-mega-menu">
-
                     <!-- First Slider: الدولار اليوم -->
                     <div class="background-currency">
                       <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
@@ -96,17 +99,16 @@
                       </header>
                       <div class="owl-carousel slider-eur owl-theme currency-slider"></div>
                     </div>
-
                   </div>
                 </div>
               </div>
-
             </div>
 
             <div class="v-line"></div>
 
+            <!-- Weather Icon & Mega Menu -->
             <div class="icon-container">
-              <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" />
+              <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" width="32" height="32" />
               <div class="weather-mega-menu curancy-mega-menu mega-menu">
                 <div class="loading-overlay">
                   <div class="loading-spinner"></div>
@@ -115,7 +117,6 @@
                   <h2 class="weather-mega-menu-title currency-mega-menu-title">الطقس</h2>
                   <div class="weather-sliders">
                     <!-- Slider for Weather Data -->
-
                     <div class="owl-carousel weather-slider owl-theme">
                       <!-- سيتم تعبئة البيانات ديناميكيًا هنا -->
                     </div>
@@ -125,90 +126,117 @@
             </div>
 
             <div class="v-line"></div>
+
+            <!-- Notifications Icon & Mega Menu -->
             <div class="icon-container">
-              <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" />
+              <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" width="32" height="32" />
               <div class="notifications-mega-menu mega-menu">
                 <!-- Mega Menu Content for Notification -->
                 <div class="mega-menu-content">
                   <div class="notifications-container">
                     <h2 class="notifications-header currency-mega-menu-title">اشعارات</h2>
                     <div class="notification-item">
-                      <div class="notification-header">
-                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>غزة </h5>
+                      <div class="d-flex gap-3">
+                        <div class="image-noti">
+                          <img src="https://dummyimage.com/60x60/dddddd/000000/" alt="">
+                        </div>
+                        <div class="text-noti">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+
+                              <div class="title-boti">
+                                <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                  <div class="dot-title red-dot"></div>
+                                  <h5>غزة</h5>
+                                </div>
+                                <div class="date-slider"></div>
+                              </div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
                           </div>
-                          <div class="date-slider"></div>
-                        </header>
-                        <div class="notification-text">
-                          <h6>قطاع المياه في غزة</h6>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد اليومية وارتفاع في التلوث.
+                          </p>
                         </div>
                       </div>
-                      <p>
-                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                        اليومية وارتفاع في التلوث.
-                      </p>
                     </div>
                     <div class="notification-item">
-                      <div class="notification-header">
-                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>غزة </h5>
+                      <div class="d-flex gap-3">
+                        <div class="image-noti">
+                          <img src="https://dummyimage.com/60x60/dddddd/000000/" alt="">
+                        </div>
+                        <div class="text-noti">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+
+                              <div class="title-boti">
+                                <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                  <div class="dot-title red-dot"></div>
+                                  <h5>غزة</h5>
+                                </div>
+                                <div class="date-slider"></div>
+                              </div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
                           </div>
-                          <div class="date-slider"></div>
-                        </header>
-                        <div class="notification-text">
-                          <h6>قطاع المياه في غزة</h6>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد اليومية وارتفاع في التلوث.
+                          </p>
                         </div>
                       </div>
-                      <p>
-                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                        اليومية وارتفاع في التلوث.
-                      </p>
                     </div>
                     <div class="notification-item">
-                      <div class="notification-header">
-                        <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>غزة </h5>
+                      <div class="d-flex gap-3">
+                        <div class="image-noti">
+                          <img src="https://dummyimage.com/60x60/dddddd/000000/" alt="">
+                        </div>
+                        <div class="text-noti">
+                          <div class="notification-header">
+                            <header class="d-flex align-items-center gap-2 justify-content-between mb-2">
+
+                              <div class="title-boti">
+                                <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                  <div class="dot-title red-dot"></div>
+                                  <h5>غزة</h5>
+                                </div>
+                                <div class="date-slider"></div>
+                              </div>
+                            </header>
+                            <div class="notification-text">
+                              <h6>قطاع المياه في غزة</h6>
+                            </div>
                           </div>
-                          <div class="date-slider"></div>
-                        </header>
-                        <div class="notification-text">
-                          <h6>قطاع المياه في غزة</h6>
+                          <p>
+                            قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد اليومية وارتفاع في التلوث.
+                          </p>
                         </div>
                       </div>
-                      <p>
-                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
-                        اليومية وارتفاع في التلوث.
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
+            <!-- End of Left Icons -->
           </div>
         </div>
       </div>
     </div>
-
     <!-- top-bar-end -->
 
     <!-- nav-bar-start -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
         <div class="d-flex align-items-center py-3 gap-2">
-          <button class="navbar-toggler pt-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          <button class="navbar-toggler pt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
           </button>
           <!-- Input field for mobile screens -->
-          <input type="text" class="form-control d-lg-none " style="max-width: 450px" dir="rtl"
+          <input type="text" class="form-control d-lg-none" style="max-width: 450px" dir="rtl"
             placeholder="ابحث عن....." />
         </div>
 
@@ -223,240 +251,210 @@
               </a>
               <div class="mega-menu" id="local-news-slide-menu">
                 <div class="menu-container">
+                  <!-- Jerusalem -->
                   <div class="menu-item">
-                    <h3>القدس</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>القدس</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Gaza -->
                   <div class="menu-item">
-                    <h3>غزة</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>غزة</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Nablus -->
                   <div class="menu-item">
-                    <h3>نابلس</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>نابلس</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Hebron -->
                   <div class="menu-item">
-                    <h3>الخليل</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>الخليل</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Ramallah -->
                   <div class="menu-item">
-                    <h3>رام الله</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>رام الله</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Tulkarm -->
                   <div class="menu-item">
-                    <h3>طولكرم</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>طولكرم</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Bethlehem -->
                   <div class="menu-item">
-                    <h3>بيت لحم</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>بيت لحم</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Qalqilya -->
                   <div class="menu-item">
-                    <h3>قلقيلية</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>قلقيلية</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Occupied Interior -->
                   <div class="menu-item">
-                    <h3>الداخل المحتل</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>الداخل المحتل</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
+
+                  <!-- Jericho -->
                   <div class="menu-item">
-                    <h3>أريحا</h3>
+                    <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                      <div class="dot-title red-dot"></div>
+                      <h3>أريحا</h3>
+                    </div>
                     <ul>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الاول للمنطقة </h5>
-                          </div>
+                          خبر الاول للمنطقة
                         </a>
-
                       </li>
                       <li>
                         <a href="#">
-                          <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
-                            <div class="dot-title red-dot"></div>
-                            <h5>خبر الثانى للمنطقة </h5>
-                          </div>
+                          خبر الثانى للمنطقة
                         </a>
-
                       </li>
                     </ul>
                   </div>
                 </div>
+
               </div>
             </li>
-
+            <!-- Other navigation items -->
             <li class="nav-item">
               <a class="nav-link custom-hover" href="#">تقارير بوست</a>
             </li>
@@ -472,7 +470,6 @@
             <li class="nav-item">
               <a class="nav-link custom-hover" href="#">فيديو</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link custom-hover" href="#">اتصل بنا</a>
             </li>
@@ -981,12 +978,29 @@
                     داريناها 20 عامًا
                   </a>
                   <div class="audio-player">
+                    <!-- Rewind Button -->
+                    <button class="rewind audio-button">
+                      <i class="fas fa-backward"></i>
+                    </button>
+                    
+                    <!-- Play/Pause Button -->
                     <button class="play-pause audio-button">
                       <i class="fas fa-play"></i>
                     </button>
+                    
+                    <!-- Forward Button -->
+                    <button class="forward audio-button">
+                      <i class="fas fa-forward"></i>
+                    </button>
+                    
+                    <!-- Waveform Container with audio source -->
                     <div class="waveform-ph" data-audio="./audio/001.mp3"></div>
+                    
+                    <!-- Time Display -->
                     <span class="time-display audio-time">0:00</span>
                   </div>
+                  
+                  
                 </div>
               </div>
 
@@ -998,7 +1012,8 @@
                   <button class="play-button" style="display: none;">
                     <i class="fas fa-play"></i>
                   </button>
-                  <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay" style="display: block;"></iframe>
+                  <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" allow="autoplay"
+                    style="display: block;"></iframe>
                 </div>
                 <div class="news-details">
                   <div class="date-container">
@@ -1006,7 +1021,7 @@
                       <div class="dot-title "></div>
                       <h4 class="card-title-with-dot">أخبار محلية</h4>
                     </div>
-                    <p class="date" >
+                    <p class="date">
                       <i class="fa-regular fa-calendar" alt="Calendar icon"></i>
                       12:06 م 09 ديسمبر 2024
                     </p>
@@ -1040,7 +1055,7 @@
                           </a>
                         </li>
                       </ul>
-    
+
                     </div>
                   </div>
                 </div>
@@ -1103,7 +1118,7 @@
               </div>
 
               <!-- Articles Section -->
-           
+
               <div class="article-section toggle-menu-articls">
                 <div class="article-header">
                   <div class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
@@ -1177,9 +1192,9 @@
                 <a href="#" class="btn btn-outline-primary read-more">
                   رؤية المزيد
                   <i class="fa-solid fa-angles-left"></i>
-  
+
                 </a>
-  
+
               </div>
             </div>
           </div>
@@ -1692,12 +1707,28 @@
                       حاربناها ٢٠ عاما
                     </a>
                     <div class="audio-player">
+                      <!-- Rewind Button -->
+                      <button class="rewind audio-button">
+                        <i class="fas fa-backward"></i>
+                      </button>
+                      
+                      <!-- Play/Pause Button -->
                       <button class="play-pause audio-button">
                         <i class="fas fa-play"></i>
                       </button>
+                      
+                      <!-- Forward Button -->
+                      <button class="forward audio-button">
+                        <i class="fas fa-forward"></i>
+                      </button>
+                      
+                      <!-- Waveform Container with audio source -->
                       <div class="waveform-ph" data-audio="./audio/001.mp3"></div>
+                      
+                      <!-- Time Display -->
                       <span class="time-display audio-time">0:00</span>
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -2566,12 +2597,28 @@
                   حاربناها ٢٠ عاما
                 </a>
                 <div class="audio-player">
+                  <!-- Rewind Button -->
+                  <button class="rewind audio-button">
+                    <i class="fas fa-backward"></i>
+                  </button>
+                  
+                  <!-- Play/Pause Button -->
                   <button class="play-pause audio-button">
                     <i class="fas fa-play"></i>
                   </button>
+                  
+                  <!-- Forward Button -->
+                  <button class="forward audio-button">
+                    <i class="fas fa-forward"></i>
+                  </button>
+                  
+                  <!-- Waveform Container with audio source -->
                   <div class="waveform-ph" data-audio="./audio/001.mp3"></div>
+                  
+                  <!-- Time Display -->
                   <span class="time-display audio-time">0:00</span>
                 </div>
+                
               </div>
             </div>
           </div>
