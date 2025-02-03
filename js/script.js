@@ -1,4 +1,28 @@
 $(document).ready(function () {
+
+ // On load, set the accordion background from its data attribute
+ var aBgimage = $('.accordion').data('background');
+ $('.accordion').css('background-image', 'url('+aBgimage+')');
+ 
+ $('.section').on('click', function(e){
+   if( $(this).hasClass('open') ){
+     e.stopPropagation();
+     $('.accordion').removeClass('enabled')
+     $('.section').removeClass('open')
+   } else {
+     $(this).parent('.accordion').addClass('enabled')
+     $(this).addClass('open')
+     $(this).siblings('.section').removeClass('open')
+     var bGimage = $(this).data('background')
+     $('.accordion').css('background-image', 'url('+bGimage+')');
+   }
+ })
+ 
+ $('.close').on('click', function(e){
+   e.stopPropagation();
+   $('.accordion').removeClass('enabled')
+   $('.section').removeClass('open')
+ })
   $(".owl-news").owlCarousel({
     loop: true,
     margin: 20,
