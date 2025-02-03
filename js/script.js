@@ -2,27 +2,36 @@ $(document).ready(function () {
 
  // On load, set the accordion background from its data attribute
  var aBgimage = $('.files-accordion').data('background');
- $('.files-accordion').css('background-image', 'url('+aBgimage+')');
+ $('.files-accordion').css('background-image', 'url(' + aBgimage + ')');
  
- $('.article-files').on('click', function(e){
-   if( $(this).hasClass('open') ){
+ // Toggle open/close on article click
+ $('.article-files').on('click', function(e) {
+   if ($(this).hasClass('open')) {
      e.stopPropagation();
-     $('.files-accordion').removeClass('enabled')
-     $('.article-files').removeClass('open')
+     $('.files-accordion').removeClass('enabled');
+     $('.article-files').removeClass('open');
+     // Reset background to the original image
+     $('.files-accordion').css('background-image', 'url(https://images.skynewsarabia.com/images/v1/2021/05/20/1438790/1400/430/1-1438790.jpg)');
    } else {
-     $(this).parent('.files-accordion').addClass('enabled')
-     $(this).addClass('open')
-     $(this).siblings('.article-files').removeClass('open')
-     var bGimage = $(this).data('background')
-     $('.files-accordion').css('background-image', 'url('+bGimage+')');
+     $(this).parent('.files-accordion').addClass('enabled');
+     $(this).addClass('open');
+     $(this).siblings('.article-files').removeClass('open');
+     var bGimage = $(this).data('background');
+     $('.files-accordion').css('background-image', 'url(' + bGimage + ')');
    }
- })
+ });
  
- $('.close').on('click', function(e){
+ // Close button event: remove open state and reset background
+ $('.files-accordion .close').on('click', function(e) {
    e.stopPropagation();
-   $('.files-accordion').removeClass('enabled')
-   $('.article-files').removeClass('open')
- })
+   $('.files-accordion').removeClass('enabled');
+   $('.article-files').removeClass('open');
+   // Reset background to the original image
+   $('.files-accordion').css('background-image', 'url(https://images.skynewsarabia.com/images/v1/2021/05/20/1438790/1400/430/1-1438790.jpg)');
+ });
+
+
+ 
   $(".owl-news").owlCarousel({
     loop: true,
     margin: 20,

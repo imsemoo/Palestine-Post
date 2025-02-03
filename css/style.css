@@ -2582,8 +2582,9 @@ ul {
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
 }
 
 .podcast-slider-header::before {
@@ -2600,16 +2601,22 @@ ul {
   z-index: -20;
 }
 
+.main-section-title {
+  position: relative;
+  display: flex;
+  align-items: center;
 
-.podcast-slider-header::after {
+}
+
+.podcast-slider-header .main-section-title::after {
   position: absolute;
   content: "";
   display: block;
   height: 2px;
   width: 100%;
-  background: linear-gradient(to right, #eee 92%, #33b3c0 50%);
-  right: -1px;
-  bottom: 16px;
+  background: var(--main-color);
+  right: 0;
+  bottom: -11px;
 }
 
 .podcast-slider-content {
@@ -4424,7 +4431,7 @@ ul {
 }
 
 /* Accordion basic transition */
-files-accordion  * {
+.files-accordion * {
   transition: all 0.3s ease 0s;
 }
 
@@ -4447,7 +4454,7 @@ files-accordion  * {
 }
 
 /* Section styling */
-.article-files {
+.files-accordion .article-files {
   flex: initial;
   width: 25%;
   height: 100%;
@@ -4468,22 +4475,22 @@ files-accordion  * {
 }
 
 /* Heading styling */
-.article-files .heading {
+.files-accordion .article-files .heading {
   transition: 0.5s ease all;
 }
 
-.article-files:hover .heading {
+.files-accordion .article-files:hover .heading {
   margin-top: -30px;
 }
 
-div.enabled article {
+.files-accordion div.enabled article {
   flex: initial;
   width: 4%;
 }
 
-.article-files.open {
+.files-accordion .article-files.open {
   width: 88%;
- 
+
   background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000', GradientType=1);
   cursor: default;
@@ -4500,7 +4507,7 @@ div.enabled article {
 }
 
 /* Heading element positioning */
-.heading {
+.files-accordion .heading {
   top: 300px;
   position: absolute;
   width: 70%;
@@ -4516,14 +4523,14 @@ div.enabled article {
   line-height: 1.3;
 }
 
-.heading .above {
+.files-accordion .heading .above {
   font-size: 13px;
   font-weight: 400;
   display: block;
   margin-bottom: 5px;
 }
 
-.heading .below {
+.files-accordion .heading .below {
   display: block;
   width: 36px;
   height: 36px;
@@ -4545,7 +4552,7 @@ div.enabled article {
   /* Changed from left to right for RTL */
   text-align: end;
   /* Align text to the right */
-  font-size: 15px;
+  font-size: 24px;
   width: 400px;
   height: 400px;
   transform-origin: 100% 0;
@@ -4604,24 +4611,56 @@ div.enabled article {
   }
 }
 
-.inside-content {
-  text-align: start;
-
-  width: 475px;
-  padding-left: 25px;
-  max-width: 80%;
+/* Updated styling for the inside-content block */
+.files-accordion .inside-content {
+  text-align: right;             /* Align text to the right for Arabic */
+  width: 90%;                    /* Adjust width as needed */
+  max-width: 600px;              /* Set a maximum width */
+  padding: 20px;                 /* Add padding for spacing */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+  border-radius: 8px;            /* Rounded corners */
   position: absolute;
-  top: 240px;
-  line-height: 1.4;
+  top: 240px;                    /* Adjust top position as needed */
+  right: 20px;                   /* Position from the right side */
+  line-height: 1.6;              /* Improved line height for text */
+  font-size: 16px;               /* Base font size */
+  color: #fff;                   /* White text color for contrast */
 }
 
-.inside-content p,
-.inside-content h2,
-.inside-content h3 {
+/* Heading (h3) styling inside the content */
+.files-accordion .inside-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Paragraph styling */
+.files-accordion .inside-content p {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+/* List styling */
+.files-accordion .inside-content ul {
+  margin: 0;
+  padding-right: 20px; /* Indent for RTL lists */
+  list-style: disc;
+}
+
+/* List item styling */
+.files-accordion .inside-content ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+
+.files-accordion .inside-content p,
+.files-accordion .inside-content h2,
+.files-accordion .inside-content h3 {
   margin: 0 0 1em 0;
 }
 
-.close {
+.files-accordion .close {
   display: none;
   z-index: 300;
   width: 40px;
@@ -4635,13 +4674,13 @@ div.enabled article {
   cursor: pointer;
 }
 
-.close .cross {
+.files-accordion .close .cross {
   position: absolute;
   left: 18px;
   top: 18px;
 }
 
-.close .a {
+.files-accordion .close .a {
   position: absolute;
   width: 14px;
   height: 2px;
@@ -4650,7 +4689,7 @@ div.enabled article {
   top: -1px;
 }
 
-.close .b {
+.files-accordion .close .b {
   position: absolute;
   width: 2px;
   height: 14px;
@@ -4668,7 +4707,7 @@ div.enabled article {
     padding: 2vh 3vw;
   }
 
-  .heading {
+  .files-accordion .heading {
     transform: rotate(90deg);
     min-width: 100vh;
     text-align: start;
@@ -4684,12 +4723,12 @@ div.enabled article {
     -o-transform: rotate(90deg);
   }
 
-  .heading .above,
-  .heading .below {
+  .files-accordion .heading .above,
+  .files-accordion .heading .below {
     display: none;
   }
 
-  files-accordion .enabled .article-files.open h2.heading {
+  .files-accordion .enabled .article-files.open h2.heading {
     transform: none;
     width: 95%;
     min-width: 200px;
@@ -4698,7 +4737,7 @@ div.enabled article {
     top: 20%;
   }
 
-  .inside-content {
+  .files-accordion .inside-content {
     max-height: calc(72%);
     overflow-y: auto;
     left: 0;
@@ -4707,8 +4746,12 @@ div.enabled article {
 }
 
 @media (max-width: 640px) {
-  files-accordion .enabled .article-files:not(.open) {
+  .files-accordion .enabled .article-files:not(.open) {
     width: 12%;
     padding: 3px;
   }
+}
+
+.section-files{
+  padding: 60px 0;
 }
