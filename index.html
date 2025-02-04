@@ -2528,37 +2528,43 @@
     </div>
   </section>
  
- <!-- Container with RTL attribute ensuring correct text direction -->
- <div class="container mt-4">
+<!-- HTML Code -->
+<div class="container mt-4">
   <!-- Video Section Container -->
   <div class="video-section">
-    <!-- Sidebar with video list and toggle button -->
+    <!-- Sidebar with video list and play/pause toggle button -->
     <div class="video-list">
-      <!-- Toggle button to play/pause the main video with a Font Awesome icon -->
+      <!-- Toggle button: Initially shows "تشغيل الفيديو" -->
       <button class="toggle-video">
-        <span class="toggle-text">إيقاف الفيديو</span>
-        <i class="fas fa-pause"></i>
+        <span class="toggle-text">تشغيل الفيديو</span>
+        <i class="fas fa-play"></i>
       </button>
       <!-- List of video items with Arabic titles -->
-      <div class="video-item" data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID_1">
-        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_1/0.jpg" alt="فيديو 1">
+      <div class="video-item" data-video="https://www.youtube.com/embed/eRsGyueVLvQ">
+        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="فيديو 1">
         <p>عنوان الفيديو الأول</p>
       </div>
-      <div class="video-item" data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID_2">
-        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_2/0.jpg" alt="فيديو 2">
+      <div class="video-item" data-video="https://www.youtube.com/embed/YE7VzlLtp-4">
+        <img src="https://img.youtube.com/vi/YE7VzlLtp-4/0.jpg" alt="فيديو 2">
         <p>عنوان الفيديو الثاني</p>
       </div>
-      <div class="video-item" data-video="https://www.youtube.com/embed/YOUR_VIDEO_ID_3">
-        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_3/0.jpg" alt="فيديو 3">
+      <div class="video-item" data-video="https://www.youtube.com/embed/eRsGyueVLvQ">
+        <img src="https://img.youtube.com/vi/eRsGyueVLvQ/0.jpg" alt="فيديو 3">
         <p>عنوان الفيديو الثالث</p>
       </div>
     </div>
     <!-- Main video player area -->
     <div class="video-player">
-      <iframe id="main-video" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" allowfullscreen></iframe>
+      <!-- سيتم التحكم في هذا العنصر من خلال YouTube API -->
+      <div id="main-video"></div>
     </div>
   </div>
 </div>
+
+
+
+
+
 
 
   <div class="container">
@@ -3009,12 +3015,115 @@
   <div id="scrollToTop">
     <i class="fa-solid fa-arrow-up"></i>
   </div>
+
+
+  <!-- تحميل مكتبة YouTube IFrame API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
   <script src="./js/jquery-3.7.1.min.js" type="text/javascript"></script>
   <script src="./js/owl.carousel.min.js" type="text/javascript"></script>
   <script src="./js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <script src="./js/script.js" type="text/javascript"></script>
   <script src="./js/currencies.js" type="text/javascript"></script>
   <script src="./js/weather.js" type="text/javascript"></script>
+  <script src="./js/script.js" type="text/javascript"></script>
+  <!-- JavaScript Code -->
+  <script>
+    // Global variables to track the player instance and current video state
+    var player;
+    var videoPlaying = false;
+    var currentVideoId = ''; // تخزين معرف الفيديو الحالي
+  
+    // This function is called by the YouTube API once it's loaded
+    function onYouTubeIframeAPIReady() {
+      // Initialize the player with a default video (يمكن تغيير الفيديو الافتراضي حسب الحاجة)
+      player = new YT.Player('main-video', {
+        height: '400',
+        width: '100%',
+        videoId: 'RbTocMHYh3s', // الفيديو الافتراضي
+        playerVars: {
+          'autoplay': 0,
+          'controls': 1
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      currentVideoId = 'RbTocMHYh3s';
+    }
+  
+    // Function called when the player is ready
+    function onPlayerReady(event) {
+      // يمكن إضافة أي إعدادات إضافية هنا إذا لزم الأمر
+    }
+  
+    // Function to update the playing state based on YouTube player events
+    function onPlayerStateChange(event) {
+      // إذا كان الفيديو في حالة تشغيل، يتم تعيين videoPlaying إلى true
+      if (event.data === YT.PlayerState.PLAYING) {
+        videoPlaying = true;
+      } else {
+        videoPlaying = false;
+      }
+      updateToggleButton();
+    }
+  
+    // Function to update the toggle button text and icon based on the playing state
+    function updateToggleButton() {
+      var button = document.querySelector('.toggle-video');
+      var textSpan = button.querySelector('.toggle-text');
+      var icon = button.querySelector('i');
+  
+      if (videoPlaying) {
+        // تغيير الحالة إلى "إيقاف الفيديو"
+        textSpan.textContent = 'إيقاف الفيديو';
+        icon.classList.remove('fa-play');
+        icon.classList.add('fa-pause');
+      } else {
+        // تغيير الحالة إلى "تشغيل الفيديو"
+        textSpan.textContent = 'تشغيل الفيديو';
+        icon.classList.remove('fa-pause');
+        icon.classList.add('fa-play');
+      }
+    }
+  
+    // Utility function to extract the video id from a YouTube embed URL
+    function extractVideoId(url) {
+      // مثال: https://www.youtube.com/embed/eRsGyueVLvQ
+      var parts = url.split('/');
+      return parts[parts.length - 1];
+    }
+  
+    // Ensure the DOM is fully loaded before adding event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click event listeners for each video item in the list
+      document.querySelectorAll('.video-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+          var videoURL = this.getAttribute('data-video');
+          var videoId = extractVideoId(videoURL);
+          currentVideoId = videoId;
+          // Load the selected video into the player and start playing
+          if (player && player.loadVideoById) {
+            player.loadVideoById(videoId);
+          }
+        });
+      });
+  
+      // Add click event listener for the toggle button
+      document.querySelector('.toggle-video').addEventListener('click', function() {
+        if (!player) return;
+        // Toggle play/pause for the current video using YouTube API methods
+        if (videoPlaying) {
+          player.pauseVideo();
+        } else {
+          player.playVideo();
+        }
+      });
+    });
+  </script>
+  
+
+  
 </body>
 
 </html>

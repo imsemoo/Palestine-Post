@@ -4794,9 +4794,9 @@ ul {
 
 }
 
- /* Main container for the video section with a dark blue background */
+ /* Main container for the video section with dark blue background */
  .video-section {
-  direction: rtl; /* Ensure RTL layout */
+  direction: rtl; /* Ensure right-to-left layout */
   display: flex;
   flex-direction: row-reverse;
   background: #023B56; /* Dark blue background */
@@ -4809,15 +4809,16 @@ ul {
 /* Sidebar containing the video list and toggle button */
 .video-list {
   width: 30%;
-  background: #01304d; /* Slightly darker blue for sidebar */
-  border-right: 3px solid var(--main-color); /* Accent border */
+  background: #01304d; /* Darker blue for sidebar */
+  border-right: 3px solid var(--main-color);
   overflow-y: auto;
   max-height: 500px;
   padding: 20px 15px;
 }
 
-/* Toggle button styling with Font Awesome icons */
-.video-list .toggle-video {
+/* Styling for the play/pause toggle button with Font Awesome icons */
+.toggle-video {
+  gap: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4826,21 +4827,20 @@ ul {
   padding: 12px;
   background: var(--main-color);
   color: #fff;
-  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
   font-size: 16px;
 }
-.video-list .toggle-video:hover {
+.toggle-video:hover {
   background: #2d9fa9;
 }
-.video-list .toggle-video i {
-  margin-left: 8px; /* Space between text and icon (icon on left in RTL) */
+.toggle-video i {
+ font-size: 24px;
 }
 
-/* Styling for each video item in the list */
+/* Styling for individual video items in the list */
 .video-item {
   display: flex;
   align-items: center;
@@ -4854,14 +4854,14 @@ ul {
   background: rgba(51, 179, 192, 0.2);
 }
 .video-item img {
-  width: 80px;
-  height: 45px;
-  margin-right: 10px; /* Space for RTL layout */
+  width: 100px;
+  height: 80px;
+  margin-left: 10px; /* Use margin-right for RTL layout */
   border-radius: 5px;
 }
 .video-item p {
   margin: 0;
-  font-size: 15px;
+  font-size: 14px;
   color: #fff; /* White text for better contrast */
   flex: 1;
 }
@@ -4882,3 +4882,15 @@ ul {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+  }
+  .video-list, .video-player {
+    width: 100%;
+  }
+  .video-player iframe {
+    height: 300px;
+  }}
