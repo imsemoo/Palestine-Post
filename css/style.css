@@ -4673,7 +4673,9 @@ ul {
   margin-bottom: 5px;
   font-size: 16px;
 }
-
+.files-accordion .inside-content ul li a{
+  color: var(--main-color);
+}
 
 .files-accordion .inside-content p,
 .files-accordion .inside-content h2,
