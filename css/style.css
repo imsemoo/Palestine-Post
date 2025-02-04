@@ -4967,10 +4967,10 @@ margin-bottom: 20px;
 }
 
 .latest-news-section2 .news-number {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--main-color);
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .latest-news-section2 .news-item a {
