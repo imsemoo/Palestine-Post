@@ -1218,14 +1218,13 @@ ul {
 .menu-control {
   display: flex;
   justify-content: space-between;
-
-  padding-bottom: 4px;
+margin-bottom: 20px;
   position: relative;
   border-bottom: 1px solid #eee;
   gap: 10px;
 }
 
-.right-choises li.active::after {
+/* .right-choises li.active::after {
   content: "";
   position: absolute;
   bottom: -11px;
@@ -1237,9 +1236,8 @@ ul {
 
 .right-choises li.active {
   color: #d23337;
-}
+} */
 
-/* زراير القائمه التي علي اليمين*/
 
 .right-choises {
   display: flex;
@@ -1249,13 +1247,32 @@ ul {
 
 .right-choises li {
   font-family: "Alexandria-SemiBold";
-
-  padding: 0 20px;
+  padding: 10px 20px;
   cursor: pointer;
   position: relative;
   color: #b2b2b2;
   font-size: 14px;
-  border-left: 2px solid #b2b2b2;
+  border-left: 2px solid #eee;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.right-choises li.active {
+  background: var(--main-color);
+  color: #fff;
+  position: relative;
+}
+
+.right-choises li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* المسافة تحت العنصر */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--main-color); /* لون السهم مثل الخلفية */
 }
 
 @media (max-width: 768px) {
@@ -2584,7 +2601,7 @@ ul {
   position: relative;
   padding-bottom: 10px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
+  border-bottom: 3px solid #eee;
 }
 
 .podcast-slider-header::before {
@@ -2612,11 +2629,11 @@ ul {
   position: absolute;
   content: "";
   display: block;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background: var(--main-color);
   right: 0;
-  bottom: -11px;
+  bottom: -13px;
 }
 
 .podcast-slider-content {
@@ -3840,7 +3857,7 @@ ul {
   position: relative;
 }
 
-/* Basic pulse effect with centered positioning */
+/* Basic pulse effect with cente#BB3F2C positioning */
 .dot-title::after {
   content: '';
   position: absolute;
@@ -3863,7 +3880,7 @@ ul {
 }
 
 /* Red dot styling */
-.red-dot {
+.#BB3F2C-dot {
   background-color: #BB3F2C;
 }
 
@@ -3897,9 +3914,9 @@ ul {
   }
 }
 
-/* Circular wave effect for red dot with centered positioning */
-.red-dot::after {
- 
+/* Circular wave effect for #BB3F2C dot with cente#BB3F2C positioning */
+.#BB3F2C-dot::after {
+
   border-radius: 50%;
   background-color: #BB3F2C;
 
@@ -3955,7 +3972,7 @@ ul {
 
 
 
-.red-dot {
+.#BB3F2C-dot {
   background: #BB3F2C;
 
 }
@@ -4673,7 +4690,8 @@ ul {
   margin-bottom: 5px;
   font-size: 16px;
 }
-.files-accordion .inside-content ul li a{
+
+.files-accordion .inside-content ul li a {
   color: var(--main-color);
 }
 
@@ -4796,22 +4814,26 @@ ul {
 
 }
 
- /* Main container for the video section with dark blue background */
- .video-section {
-  direction: rtl; /* Ensure right-to-left layout */
+.videos-section2 {
+  padding: 60px 0;
+}
+
+/* Main container for the video section with dark blue background */
+.video-section {
   display: flex;
   flex-direction: row-reverse;
-  background: #023B56; /* Dark blue background */
+  background: #023B56;
+  /* Dark blue background */
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  margin: 20px 0;
 }
 
 /* Sidebar containing the video list and toggle button */
-.video-list {
+.video-section .video-list {
   width: 30%;
-  background: #01304d; /* Darker blue for sidebar */
+  background: #01304d;
+  /* Darker blue for sidebar */
   border-right: 3px solid var(--main-color);
   overflow-y: auto;
   max-height: 500px;
@@ -4819,7 +4841,7 @@ ul {
 }
 
 /* Styling for the play/pause toggle button with Font Awesome icons */
-.toggle-video {
+.video-section .toggle-video {
   gap: 10px;
   display: flex;
   align-items: center;
@@ -4835,15 +4857,17 @@ ul {
   transition: background 0.3s ease;
   font-size: 16px;
 }
-.toggle-video:hover {
+
+.video-section .toggle-video:hover {
   background: #2d9fa9;
 }
-.toggle-video i {
- font-size: 24px;
+
+.video-section .toggle-video i {
+  font-size: 24px;
 }
 
 /* Styling for individual video items in the list */
-.video-item {
+.video-section .video-item {
   display: flex;
   align-items: center;
   padding: 12px;
@@ -4852,32 +4876,39 @@ ul {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.video-item:hover {
+
+.video-section .video-item:hover {
   background: rgba(51, 179, 192, 0.2);
 }
-.video-item img {
+
+.video-section .video-item img {
   width: 100px;
   height: 80px;
-  margin-left: 10px; /* Use margin-right for RTL layout */
+  margin-left: 10px;
+  /* Use margin-right for RTL layout */
   border-radius: 5px;
 }
-.video-item p {
+
+.video-section .video-item p {
   margin: 0;
   font-size: 14px;
-  color: #fff; /* White text for better contrast */
+  color: #fff;
+  /* White text for better contrast */
   flex: 1;
 }
 
 /* Main video player area styling */
-.video-player {
+.video-section .video-player {
   width: 70%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #022f47; /* A slightly different dark blue for contrast */
+  background: #022f47;
+  /* A slightly different dark blue for contrast */
 }
-.video-player iframe {
+
+.video-section .video-player iframe {
   width: 100%;
   height: 400px;
   border: none;
@@ -4890,9 +4921,71 @@ ul {
   .video-section {
     flex-direction: column;
   }
-  .video-list, .video-player {
+
+  .video-section .video-list,
+  .video-section .video-player {
     width: 100%;
   }
-  .video-player iframe {
+
+  .video-section .video-player iframe {
     height: 300px;
-  }}
+  }
+}
+
+.latest-news-section2 {
+  background: #fff;
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.latest-news-section2 .section-title {
+  color: var(--main-color);
+  font-size: 20px;
+  
+ 
+}
+
+.latest-news-section2 .news-list {
+  padding: 0;
+  margin: 0;
+}
+
+.latest-news-section2 .news-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.latest-news-section2 .news-item:last-child {
+  border-bottom: none;
+}
+
+.latest-news-section2 .news-number {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-left: 6px;
+}
+
+.latest-news-section2 .news-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: "Alexandria-SemiBold";
+
+}
+
+.latest-news-section2 .news-item a:hover {
+  color: var(--main-color);
+}
+
+
+
+.border-bottom-blue{
+  border-bottom: 3px solid var(--main-color);
+  padding-bottom: 10px;
+}
