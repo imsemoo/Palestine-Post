@@ -3463,7 +3463,7 @@ ul {
 }
 
 .small-card-last-news .left-section-card-text h4 {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .small-card-last-news .left-section-card-text:hover h4 {
@@ -3471,8 +3471,8 @@ ul {
 }
 
 .small-card-last-news .left-section-img {
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   overflow: hidden;
 }
 
@@ -3512,7 +3512,7 @@ ul {
 
 .list-social-media .item p {
   font-family: "Cairo";
-  font-size: 12px;
+  font-size: 14px;
 
 
 
@@ -3832,10 +3832,9 @@ ul {
 }
 
 .dot-title {
-  width: 6px;
-  /* Adjusted width to 6px */
-  height: 6px;
-  /* Adjusted height to 6px */
+  height: .375rem;
+  width: .375rem;
+
   background: var(--main-color);
   border-radius: 50%;
   position: relative;
@@ -3845,17 +3844,22 @@ ul {
 .dot-title::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
   width: 100%;
-  /* Inherits the 6px size */
+  /*Inheritsthe6pxsize*/
   height: 100%;
   border-radius: 50%;
   background-color: var(--main-color);
   transform: translate(-50%, -50%);
   transform-origin: center;
-  animation: pulse 1.5s infinite;
+  animation: pulse 2s infinite;
   z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-animation: pulse 2s infinite;
 }
 
 /* Red dot styling */
@@ -3866,35 +3870,40 @@ ul {
 /* Pulse effect animation keyframes */
 @keyframes pulse {
   0% {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.9);
     opacity: 0.7;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
   }
 
   50% {
-    transform: translate(-50%, -50%) scale(2.5);
+    transform: scale(2.4);
     opacity: 0.4;
+    -webkit-transform: scale(2.4);
+    -moz-transform: scale(2.4);
+    -ms-transform: scale(2.4);
+    -o-transform: scale(2.4);
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
     opacity: 0.7;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
 
 /* Circular wave effect for red dot with centered positioning */
 .red-dot::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
+ 
   border-radius: 50%;
   background-color: #BB3F2C;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
-  animation: pulse 1.5s infinite;
-  z-index: -1;
+
+
 }
 
 
@@ -4613,18 +4622,29 @@ ul {
 
 /* Updated styling for the inside-content block */
 .files-accordion .inside-content {
-  text-align: right;             /* Align text to the right for Arabic */
-  width: 90%;                    /* Adjust width as needed */
-  max-width: 600px;              /* Set a maximum width */
-  padding: 20px;                 /* Add padding for spacing */
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
-  border-radius: 8px;            /* Rounded corners */
+  text-align: right;
+  /* Align text to the right for Arabic */
+  width: 90%;
+  /* Adjust width as needed */
+  max-width: 600px;
+  /* Set a maximum width */
+  padding: 20px;
+  /* Add padding for spacing */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background for readability */
+  border-radius: 8px;
+  /* Rounded corners */
   position: absolute;
-  top: 240px;                    /* Adjust top position as needed */
-  right: 20px;                   /* Position from the right side */
-  line-height: 1.6;              /* Improved line height for text */
-  font-size: 16px;               /* Base font size */
-  color: #fff;                   /* White text color for contrast */
+  top: 240px;
+  /* Adjust top position as needed */
+  right: 20px;
+  /* Position from the right side */
+  line-height: 1.6;
+  /* Improved line height for text */
+  font-size: 16px;
+  /* Base font size */
+  color: #fff;
+  /* White text color for contrast */
 }
 
 /* Heading (h3) styling inside the content */
@@ -4643,7 +4663,8 @@ ul {
 /* List styling */
 .files-accordion .inside-content ul {
   margin: 0;
-  padding-right: 20px; /* Indent for RTL lists */
+  padding-right: 20px;
+  /* Indent for RTL lists */
   list-style: disc;
 }
 
@@ -4752,6 +4773,112 @@ ul {
   }
 }
 
-.section-files{
+.section-files {
   padding: 60px 0;
+}
+
+.line-blue-to-img {
+  position: relative;
+}
+
+.line-blue-to-img::after {
+  background-color: var(--main-color);
+  border-radius: 9999px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: .5rem;
+  z-index: 2;
+  content: "";
+
+}
+
+ /* Main container for the video section with a dark blue background */
+ .video-section {
+  direction: rtl; /* Ensure RTL layout */
+  display: flex;
+  flex-direction: row-reverse;
+  background: #023B56; /* Dark blue background */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+/* Sidebar containing the video list and toggle button */
+.video-list {
+  width: 30%;
+  background: #01304d; /* Slightly darker blue for sidebar */
+  border-right: 3px solid var(--main-color); /* Accent border */
+  overflow-y: auto;
+  max-height: 500px;
+  padding: 20px 15px;
+}
+
+/* Toggle button styling with Font Awesome icons */
+.video-list .toggle-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+.video-list .toggle-video:hover {
+  background: #2d9fa9;
+}
+.video-list .toggle-video i {
+  margin-left: 8px; /* Space between text and icon (icon on left in RTL) */
+}
+
+/* Styling for each video item in the list */
+.video-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.video-item:hover {
+  background: rgba(51, 179, 192, 0.2);
+}
+.video-item img {
+  width: 80px;
+  height: 45px;
+  margin-right: 10px; /* Space for RTL layout */
+  border-radius: 5px;
+}
+.video-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #fff; /* White text for better contrast */
+  flex: 1;
+}
+
+/* Main video player area styling */
+.video-player {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #022f47; /* A slightly different dark blue for contrast */
+}
+.video-player iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

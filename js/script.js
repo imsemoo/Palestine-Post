@@ -20,7 +20,42 @@ $(document).ready(function () {
      $('.files-accordion').css('background-image', 'url(' + bGimage + ')');
    }
  });
- 
+  // Initialize video playing state and store the current video URL
+  var videoPlaying = true;
+  var currentVideoSrc = $('#main-video').attr('src');
+
+  // Toggle play/pause functionality for the main video using Font Awesome icons
+  $('.toggle-video').on('click', function(){
+    if(videoPlaying) {
+      // Pause the video by clearing the src attribute
+      $('#main-video').attr('src', '');
+      videoPlaying = false;
+      // Update button text and icon to indicate play state
+      $('.toggle-text').text('تشغيل الفيديو');
+      $(this).find('i').removeClass('fa-pause').addClass('fa-play');
+    } else {
+      // Resume the video by restoring the src attribute
+      $('#main-video').attr('src', currentVideoSrc);
+      videoPlaying = true;
+      // Update button text and icon to indicate pause state
+      $('.toggle-text').text('إيقاف الفيديو');
+      $(this).find('i').removeClass('fa-play').addClass('fa-pause');
+    }
+  });
+
+  // Update the main video when a video item is clicked from the list
+  $('.video-item').on('click', function(){
+    var videoSrc = $(this).data('video');
+    $('#main-video').attr('src', videoSrc);
+    currentVideoSrc = videoSrc;
+    // If the video was previously paused, update the toggle button and state
+    if(!videoPlaying) {
+      $('.toggle-text').text('إيقاف الفيديو');
+      $('.toggle-video').find('i').removeClass('fa-play').addClass('fa-pause');
+      videoPlaying = true;
+    }
+  });
+
  // Close button event: remove open state and reset background
  $('.files-accordion .close').on('click', function(e) {
    e.stopPropagation();
