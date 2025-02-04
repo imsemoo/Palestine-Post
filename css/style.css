@@ -1478,13 +1478,18 @@ margin-bottom: 20px;
 }
 
 .share-social-icons {
-  display: none;
-
+  display: none; /* مخفية افتراضيًا */
+  opacity: 0;
+  transform: translateX(-20px); /* تتحرك للخلف عند الإخفاء */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .share-social-icons.show {
-  display: flex;
+  display: flex; /* تتحول إلى flex عند التفعيل */
+  opacity: 1;
+  transform: translateX(0); /* تنزلق للأمام */
 }
+
 
 .share-social-icons a img {
   width: 24px !important;

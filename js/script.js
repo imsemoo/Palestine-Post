@@ -188,10 +188,20 @@ $(document).ready(function () {
     });
   });
 
-  $(".share-arrow, .share h4 ,.btn-share").click(function (e) {
+  $(".share-arrow, .share h4, .btn-share").click(function (e) {
     e.preventDefault();
-    $(this).siblings(".share-social-icons").toggle();
-  });
+    let shareIcons = $(this).siblings(".share-social-icons");
+
+    if (shareIcons.hasClass("show")) {
+        shareIcons.removeClass("show");
+        setTimeout(() => shareIcons.hide(), 300); // يخفي العنصر بعد الانتقال
+    } else {
+        shareIcons.show(); // يظهر العنصر قبل إضافة التأثير
+        setTimeout(() => shareIcons.addClass("show"), 10);
+    }
+});
+
+
 
   $(window).on("scroll", function () {
     $("#scrollToTop").toggleClass("show", $(this).scrollTop() > 800);
