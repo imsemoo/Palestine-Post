@@ -1,65 +1,14 @@
 $(document).ready(function () {
-  $('.fb-accordion-item').click(function() {
+  $('.fb-accordion-item').click(function () {
     // Collapse all items
     $('.fb-accordion-item').addClass('fb-closed').removeClass('fb-active');
     // Expand the clicked item
     $(this).removeClass('fb-closed').addClass('fb-active');
   });
 
- // On load, set the accordion background from its data attribute
- var aBgimage = $('.files-accordion').data('background');
- $('.files-accordion').css('background-image', 'url(' + aBgimage + ')');
- 
- // Toggle open/close on article click
- $('.article-files').on('click', function(e) {
-   if ($(this).hasClass('open')) {
-     e.stopPropagation();
-     $('.files-accordion').removeClass('enabled');
-     $('.article-files').removeClass('open');
-     // Reset background to the original image
-     $('.files-accordion').css('background-image', 'url(https://images.skynewsarabia.com/images/v1/2021/05/20/1438790/1400/430/1-1438790.jpg)');
-   } else {
-     $(this).parent('.files-accordion').addClass('enabled');
-     $(this).addClass('open');
-     $(this).siblings('.article-files').removeClass('open');
-     var bGimage = $(this).data('background');
-     $('.files-accordion').css('background-image', 'url(' + bGimage + ')');
-   }
- });
-
- // Close button event: remove open state and reset background
- $('.files-accordion .close').on('click', function(e) {
-   e.stopPropagation();
-   $('.files-accordion').removeClass('enabled');
-   $('.article-files').removeClass('open');
-   // Reset background to the original image
-   $('.files-accordion').css('background-image', 'url(https://images.skynewsarabia.com/images/v1/2021/05/20/1438790/1400/430/1-1438790.jpg)');
- });
-
-
- // When a tab is clicked in the news controls list
- $('.local-news-controls li').click(function() {
-  // Remove the active class from all tabs
-  $('.local-news-controls li').removeClass('active');
-  // Add the active class to the clicked tab
-  $(this).addClass('active');
-
-  // Get the id of the clicked tab
-  var tabId = $(this).attr('id');
-
-  // Hide all slider containers
-  $('.owl-carousel-container').hide();
-
-  // Show the slider container that corresponds to the clicked tab
-  // For the "jerusalem" tab, use the container with the ID "slider1-container"
-  if (tabId === 'jerusalem') {
-    $('#slider1-container').show();
-  } else {
-    // For other tabs, assume the container id follows the pattern: tabId + "-slider-container"
-    $('#' + tabId + '-slider-container').show();
-  }
-});
   
+
+
   $(".owl-news").owlCarousel({
     loop: true,
     margin: 20,
@@ -77,18 +26,18 @@ $(document).ready(function () {
   });
 
   // عند النقر على التبويبة
-  $(".buttons-group-tabs li").click(function() {
+  $(".buttons-group-tabs li").click(function () {
     var tab = $(this).data("tab");
-    
+
     // تغيير النمط النشط للتبويبات
     $(".buttons-group-tabs li").removeClass("active");
     $(this).addClass("active");
-    
+
     // إخفاء جميع المحتويات وعرض المحتوى المقابل للتبويب
     $(".tab-pane").hide();
     $("." + tab).show();
   });
- 
+
   // Initialize sliders with configurations
   const sliderConfigs = [
     {
@@ -203,30 +152,20 @@ $(document).ready(function () {
     $(".cells-container ").toggleClass("active", !isBars);
   });
 
-  // $(".local-news-controls ul li").on("click", function () {
-  //   const $li = $(this);
-  //   $li.fadeOut(300, function () {
-  //     $li
-  //       // .prependTo($li.parent())
-  //       // .fadeIn(300)
-  //       .addClass("active")
-  //       .siblings()
-  //       .removeClass("active");
-  //   });
-  // });
+
 
   $(".share-arrow, .share h4, .btn-share").click(function (e) {
     e.preventDefault();
     let shareIcons = $(this).siblings(".share-social-icons");
 
     if (shareIcons.hasClass("show")) {
-        shareIcons.removeClass("show");
-        setTimeout(() => shareIcons.hide(), 300); // يخفي العنصر بعد الانتقال
+      shareIcons.removeClass("show");
+      setTimeout(() => shareIcons.hide(), 300); // يخفي العنصر بعد الانتقال
     } else {
-        shareIcons.show(); // يظهر العنصر قبل إضافة التأثير
-        setTimeout(() => shareIcons.addClass("show"), 10);
+      shareIcons.show(); // يظهر العنصر قبل إضافة التأثير
+      setTimeout(() => shareIcons.addClass("show"), 10);
     }
-});
+  });
 
 
 
@@ -243,130 +182,130 @@ $(document).ready(function () {
 
 
 
-  
 
- // Loop through each audio player container on the page
-document.querySelectorAll('.audio-player').forEach((container) => {
-  // Create a WaveSurfer instance for the current audio player container
-  const wavesurfer = WaveSurfer.create({
-    container: container.querySelector('.waveform-ph'),
-    waveColor: '#E0E0E0',
-    progressColor: '#33B3C0',
-    height: 20,
-    responsive: true,
-  });
 
-  // Load the audio file from the data attribute in the waveform container
-  const audioPath = container.querySelector('.waveform-ph').dataset.audio;
-  wavesurfer.load(audioPath);
+  // Loop through each audio player container on the page
+  document.querySelectorAll('.audio-player').forEach((container) => {
+    // Create a WaveSurfer instance for the current audio player container
+    const wavesurfer = WaveSurfer.create({
+      container: container.querySelector('.waveform-ph'),
+      waveColor: '#E0E0E0',
+      progressColor: '#33B3C0',
+      height: 20,
+      responsive: true,
+    });
 
-  // Get control buttons and time display element
-  const playPauseButton = container.querySelector('.play-pause');
-  const rewindButton = container.querySelector('.rewind');
-  const forwardButton = container.querySelector('.forward');
-  const timeDisplay = container.querySelector('.time-display');
+    // Load the audio file from the data attribute in the waveform container
+    const audioPath = container.querySelector('.waveform-ph').dataset.audio;
+    wavesurfer.load(audioPath);
 
-  // Initialize volume level (range: 0.0 to 1.0)
-  let currentVolume = 1.0;
-  wavesurfer.setVolume(currentVolume);
+    // Get control buttons and time display element
+    const playPauseButton = container.querySelector('.play-pause');
+    const rewindButton = container.querySelector('.rewind');
+    const forwardButton = container.querySelector('.forward');
+    const timeDisplay = container.querySelector('.time-display');
 
-  // Get the volume slider element and volume icon element
-  const volumeSlider = container.querySelector('.volume-slider');
-  const volumeIcon = container.querySelector('.volume-icon');
-
-  // Set the slider's initial value and update the background gradient
-  volumeSlider.value = currentVolume;
-  updateSliderBackground(currentVolume);
-
-  // Function to update the slider background gradient for RTL:
-  // The gradient fills from the right (0%) to left (100%).
-  function updateSliderBackground(volume) {
-    const percentage = volume * 100; // percentage of the active (colored) portion
-    // For RTL, the gradient is set to "to left" so that the active color (#00a2b9)
-    // fills from the right edge up to the given percentage, and the remainder is gray.
-    volumeSlider.style.background = `linear-gradient(to left, #00a2b9 0%, #00a2b9 ${percentage}%, #E0E0E0 ${percentage}%, #E0E0E0 100%)`;
-  }
-
-  // Update the volume and slider appearance when the slider value changes
-  volumeSlider.addEventListener('input', () => {
-    currentVolume = parseFloat(volumeSlider.value);
+    // Initialize volume level (range: 0.0 to 1.0)
+    let currentVolume = 1.0;
     wavesurfer.setVolume(currentVolume);
+
+    // Get the volume slider element and volume icon element
+    const volumeSlider = container.querySelector('.volume-slider');
+    const volumeIcon = container.querySelector('.volume-icon');
+
+    // Set the slider's initial value and update the background gradient
+    volumeSlider.value = currentVolume;
     updateSliderBackground(currentVolume);
 
-    // Update the volume icon: show mute icon if volume is 0, otherwise show volume up icon
-    if (currentVolume === 0) {
-      volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>';
-    } else {
-      volumeIcon.innerHTML = '<i class="fas fa-volume-up"></i>';
+    // Function to update the slider background gradient for RTL:
+    // The gradient fills from the right (0%) to left (100%).
+    function updateSliderBackground(volume) {
+      const percentage = volume * 100; // percentage of the active (colored) portion
+      // For RTL, the gradient is set to "to left" so that the active color (#00a2b9)
+      // fills from the right edge up to the given percentage, and the remainder is gray.
+      volumeSlider.style.background = `linear-gradient(to left, #00a2b9 0%, #00a2b9 ${percentage}%, #E0E0E0 ${percentage}%, #E0E0E0 100%)`;
     }
+
+    // Update the volume and slider appearance when the slider value changes
+    volumeSlider.addEventListener('input', () => {
+      currentVolume = parseFloat(volumeSlider.value);
+      wavesurfer.setVolume(currentVolume);
+      updateSliderBackground(currentVolume);
+
+      // Update the volume icon: show mute icon if volume is 0, otherwise show volume up icon
+      if (currentVolume === 0) {
+        volumeIcon.innerHTML = '<i class="fas fa-volume-mute"></i>';
+      } else {
+        volumeIcon.innerHTML = '<i class="fas fa-volume-up"></i>';
+      }
+    });
+
+    // Play/Pause toggle with icon update
+    playPauseButton.addEventListener('click', () => {
+      wavesurfer.playPause();
+      playPauseButton.innerHTML = wavesurfer.isPlaying() ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
+    });
+
+    // Rewind 10 seconds
+    rewindButton.addEventListener('click', () => {
+      const currentTime = wavesurfer.getCurrentTime();
+      let newTime = currentTime - 10;
+      if (newTime < 0) newTime = 0;
+      const duration = wavesurfer.getDuration();
+      if (duration > 0) {
+        wavesurfer.seekTo(newTime / duration);
+      }
+    });
+
+    // Forward 10 seconds
+    forwardButton.addEventListener('click', () => {
+      const currentTime = wavesurfer.getCurrentTime();
+      let newTime = currentTime + 10;
+      const duration = wavesurfer.getDuration();
+      if (newTime > duration) newTime = duration;
+      if (duration > 0) {
+        wavesurfer.seekTo(newTime / duration);
+      }
+    });
+
+    // Update the time display during audio playback
+    wavesurfer.on('audioprocess', () => {
+      const currentTime = wavesurfer.getCurrentTime();
+      const duration = wavesurfer.getDuration();
+      timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+    });
+
+    // Set the initial time display when the audio is ready
+    wavesurfer.on('ready', () => {
+      const duration = wavesurfer.getDuration();
+      timeDisplay.textContent = `${formatTime(0)} / ${formatTime(duration)}`;
+    });
   });
 
-  // Play/Pause toggle with icon update
-  playPauseButton.addEventListener('click', () => {
-    wavesurfer.playPause();
-    playPauseButton.innerHTML = wavesurfer.isPlaying() ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
-  });
-
-  // Rewind 10 seconds
-  rewindButton.addEventListener('click', () => {
-    const currentTime = wavesurfer.getCurrentTime();
-    let newTime = currentTime - 10;
-    if (newTime < 0) newTime = 0;
-    const duration = wavesurfer.getDuration();
-    if (duration > 0) {
-      wavesurfer.seekTo(newTime / duration);
-    }
-  });
-
-  // Forward 10 seconds
-  forwardButton.addEventListener('click', () => {
-    const currentTime = wavesurfer.getCurrentTime();
-    let newTime = currentTime + 10;
-    const duration = wavesurfer.getDuration();
-    if (newTime > duration) newTime = duration;
-    if (duration > 0) {
-      wavesurfer.seekTo(newTime / duration);
-    }
-  });
-
-  // Update the time display during audio playback
-  wavesurfer.on('audioprocess', () => {
-    const currentTime = wavesurfer.getCurrentTime();
-    const duration = wavesurfer.getDuration();
-    timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
-  });
-
-  // Set the initial time display when the audio is ready
-  wavesurfer.on('ready', () => {
-    const duration = wavesurfer.getDuration();
-    timeDisplay.textContent = `${formatTime(0)} / ${formatTime(duration)}`;
-  });
-});
-
-// Function to format seconds into MM:SS format
-function formatTime(seconds) {
-  const minutes = Math.floor(seconds / 60);
-  const secs = Math.floor(seconds % 60);
-  return `${minutes}:${secs.toString().padStart(2, '0')}`;
-}
-
-  
+  // Function to format seconds into MM:SS format
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+  }
 
 
-   // إغلاق قائمة الإشعارات عند النقر في أي مكان خارجها
-   $(document).on('click', function() {
+
+
+  // إغلاق قائمة الإشعارات عند النقر في أي مكان خارجها
+  $(document).on('click', function () {
     $('.notifications-mega-menu').hide();
   });
-  
+
   // منع إخفاء القائمة عند النقر داخل القائمة نفسها
-  $(document).on('click', '.notifications-mega-menu', function(e) {
+  $(document).on('click', '.notifications-mega-menu', function (e) {
     e.stopPropagation();
   });
 
   // عند النقر على أيقونة الإشعارات
-  $('.notifications-mega-menu').closest('.icon-container').on('click', function(e) {
+  $('.notifications-mega-menu').closest('.icon-container').on('click', function (e) {
     e.stopPropagation();
-    
+
     const notificationMenu = $(this).find('.notifications-mega-menu');
 
     // إخفاء أي قوائم أخرى (Mega Menus) مفتوحة
