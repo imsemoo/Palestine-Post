@@ -78,6 +78,9 @@ $(document).ready(function () {
         margin: 20,
         rtl: true,
         nav: true,
+          // Disable mouse and touch dragging
+  mouseDrag: false,
+  touchDrag: false,
         navText: [
           "<i class='fa-solid fa-chevron-right'></i>",
           "<i class='fa-solid fa-chevron-left'></i>",
