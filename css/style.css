@@ -1204,12 +1204,11 @@ ul {
   color: #b2b2b2;
   font-size: 14px;
   border-left: 2px solid #eee;
-
 }
- .right-choises li.active {
+.right-choises li.active {
   color: var(--main-color);
   position: relative;
-} 
+}
 
 .right-choises li.active::after {
   content: "";
@@ -1224,7 +1223,7 @@ ul {
   border-top: 10px solid var(--main-color); /* لون السهم مثل الخلفية */
 }
 
-.right-choises li.active::before{
+.right-choises li.active::before {
   content: "";
   width: 100%;
   height: 2px;
@@ -2174,8 +2173,7 @@ ul {
   color: #d23337 !important;
   border-bottom: 2px solid #d23337;
 }
-.local-news-controls ul li.active ::after{
-
+.local-news-controls ul li.active ::after {
 }
 
 /*local-news-header-controls-end شريط التنقل  */
@@ -4841,12 +4839,11 @@ ul {
   flex: 1;
 }
 
-
-.title-video-play{
+.title-video-play {
   font-size: 14px;
 }
 .toplist-videos span,
-.state-video{
+.state-video {
   color: #ded6d6;
   font-size: 14px;
 }
@@ -4860,7 +4857,13 @@ ul {
   border-radius: 2px;
   outline: none;
   /* Initial background gradient: full volume (active color) on the right */
-  background: linear-gradient(to left, #00a2b9 0%, #00a2b9 100%, #E0E0E0 100%, #E0E0E0 100%);
+  background: linear-gradient(
+    to left,
+    #00a2b9 0%,
+    #00a2b9 100%,
+    #e0e0e0 100%,
+    #e0e0e0 100%
+  );
 }
 
 /* WebKit slider thumb styling */
@@ -4885,6 +4888,158 @@ ul {
   border: none;
 }
 
-.volume-icon i{
+.volume-icon i {
   color: var(--secondry-text-color);
+}
+/* Container for the accordion */
+.fb-accordion {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+/* Accordion item styling */
+.fb-accordion-item {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.3s ease-in-out;
+  cursor: pointer;
+  background: #f5f5f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for closed items */
+.fb-accordion-item.fb-closed {
+  flex: 0.2;
+}
+
+/* Styling for the accordion title */
+.fb-accordion-title {
+  writing-mode: vertical-rl; /* Rotate text vertically */
+  transform: rotate(180deg); /* Invert the text */
+  font-size: 20px;
+  background-color: #f5f5f5;
+  padding: 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--text-color);
+}
+
+/* Hide title in active (open) item */
+.fb-accordion-item.fb-active .fb-accordion-title {
+  display: none;
+}
+
+/* Styling for the accordion content */
+.fb-accordion-content {
+  display: none;
+}
+.fb-accordion-content .text {
+  flex: 1;
+  padding: 20px;
+  text-align: start;
+}
+
+.fb-accordion-content .text h3 {
+  font-size: 16px;
+  color: #bc0600;
+  margin-bottom: 10px;
+}
+.fb-accordion-content .text p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+.fb-accordion-content .text ul li {
+  margin-bottom: 20px;
+}
+.fb-accordion-content .text ul li:last-child {
+  margin: 0;
+}
+.fb-accordion-content .text ul li a {
+  font-size: 13px;
+  color: #555;
+  padding: 5px 5px;
+  position: relative;
+  padding-right: 20px;
+  display: block;
+}
+.fb-accordion-content .text ul li a:hover {
+  color: #bc0600;
+}
+
+.fb-accordion-content .text ul li a:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background: #bc0600;
+}
+
+.fb-accordion-content .image {
+  width: 260px;
+  height: 360px;
+}
+
+.fb-accordion-content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Display content when the item is active */
+.fb-accordion-item.fb-active .fb-accordion-content {
+  display: flex;
+  flex: 1;
+}
+
+.fb-accordion-title .fa-square {
+  transform: rotate(54deg);
+  font-size: 10px;
+  color: #3a3a3a;
+  margin-right: 3px;
+}
+
+/* First accordion item - color: rich red */
+.fb-accordion-item:nth-child(1) .fb-accordion-title,
+.fb-accordion-item:nth-child(1) i {
+  color: #00796b;
+
+}
+
+/* Second accordion item - color: teal */
+.fb-accordion-item:nth-child(2) .fb-accordion-title,
+.fb-accordion-item:nth-child(2) i {
+    color: #bc0600;
+
+}
+
+/* Third accordion item - color: blue */
+.fb-accordion-item:nth-child(3) .fb-accordion-title,
+.fb-accordion-item:nth-child(3) i {
+    color: #0288d1;
+}
+
+/* Fourth accordion item - color: orange */
+.fb-accordion-item:nth-child(4) .fb-accordion-title,
+.fb-accordion-item:nth-child(4) i {
+    color: #f57c00;
+}
+
+/* Fifth accordion item - color: purple */
+.fb-accordion-item:nth-child(5) .fb-accordion-title,
+.fb-accordion-item:nth-child(5) i {
+    color: #6a1b9a;
 }

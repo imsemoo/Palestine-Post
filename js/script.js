@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  $('.fb-accordion-item').click(function() {
+    // Collapse all items
+    $('.fb-accordion-item').addClass('fb-closed').removeClass('fb-active');
+    // Expand the clicked item
+    $(this).removeClass('fb-closed').addClass('fb-active');
+  });
 
  // On load, set the accordion background from its data attribute
  var aBgimage = $('.files-accordion').data('background');
