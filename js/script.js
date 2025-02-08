@@ -5,13 +5,13 @@ $(document).ready(function () {
    $('.fb-accordion-item.fb-closed .fb-accordion-content').hide();
 
    // When an accordion item is clicked
-   $('.fb-accordion-item').click(function() {
+   $('.fb-accordion .fb-accordion-item').click(function() {
      // Only proceed if the clicked item is not already active
      if (!$(this).hasClass('fb-active')) {
        // Slide up the content of the currently active item
-       $('.fb-accordion-item.fb-active .fb-accordion-content').slideUp(300);
+       $('.fb-accordion .fb-accordion-item.fb-active .fb-accordion-content').slideUp(300);
        // Remove active class and add closed class for all accordion items
-       $('.fb-accordion-item').removeClass('fb-active').addClass('fb-closed');
+       $('.fb-accordion .fb-accordion-item').removeClass('fb-active').addClass('fb-closed');
  
        // Set the clicked item as active
        $(this).removeClass('fb-closed').addClass('fb-active');
