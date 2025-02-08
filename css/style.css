@@ -1204,8 +1204,7 @@ ul {
   color: #b2b2b2;
   font-size: 14px;
   border-left: 2px solid #eee;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+
 }
  .right-choises li.active {
   color: var(--main-color);
@@ -1223,6 +1222,16 @@ ul {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 10px solid var(--main-color); /* لون السهم مثل الخلفية */
+}
+
+.right-choises li.active::before{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 @media (max-width: 768px) {
@@ -2166,7 +2175,7 @@ ul {
   border-bottom: 2px solid #d23337;
 }
 .local-news-controls ul li.active ::after{
-  
+
 }
 
 /*local-news-header-controls-end شريط التنقل  */
@@ -3470,21 +3479,19 @@ ul {
   flex: 1;
 }
 
-/* تصميم الحاوية */
 .audio-player {
   display: flex;
   align-items: center;
   gap: 10px;
   margin: 20px auto;
   width: 100%;
+  flex-flow: row-reverse;
 }
 
-/* تصميم الـ waveform */
 .waveform-ph {
   flex: 1;
 }
 
-/* تصميم الأزرار */
 .audio-button {
   width: 30px;
   height: 30px;

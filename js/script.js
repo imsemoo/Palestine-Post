@@ -298,7 +298,7 @@ document.querySelectorAll('.audio-player').forEach((container) => {
   // Play/Pause toggle with icon update
   playPauseButton.addEventListener('click', () => {
     wavesurfer.playPause();
-    playPauseButton.innerHTML = wavesurfer.isPlaying() ? '⏸' : '▶';
+    playPauseButton.innerHTML = wavesurfer.isPlaying() ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
   });
 
   // Rewind 10 seconds
