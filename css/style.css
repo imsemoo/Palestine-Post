@@ -4566,6 +4566,7 @@ ul {
 /* Styling for closed items */
 .fb-accordion-item.fb-closed {
   flex: 0.2;
+  display: flex;
 }
 
 /* Styling for the accordion title */

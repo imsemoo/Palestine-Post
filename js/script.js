@@ -1,11 +1,24 @@
 $(document).ready(function () {
-  $('.fb-accordion-item').click(function () {
-    // Collapse all items
-    $('.fb-accordion-item').addClass('fb-closed').removeClass('fb-active');
-    // Expand the clicked item
-    $(this).removeClass('fb-closed').addClass('fb-active');
-  });
 
+
+   // Initially hide the content of closed accordion items
+   $('.fb-accordion-item.fb-closed .fb-accordion-content').hide();
+
+   // When an accordion item is clicked
+   $('.fb-accordion-item').click(function() {
+     // Only proceed if the clicked item is not already active
+     if (!$(this).hasClass('fb-active')) {
+       // Slide up the content of the currently active item
+       $('.fb-accordion-item.fb-active .fb-accordion-content').slideUp(300);
+       // Remove active class and add closed class for all accordion items
+       $('.fb-accordion-item').removeClass('fb-active').addClass('fb-closed');
+ 
+       // Set the clicked item as active
+       $(this).removeClass('fb-closed').addClass('fb-active');
+       // Force display as flex, hide it immediately, then slide it down smoothly
+       $(this).find('.fb-accordion-content').css('display', 'flex').hide().slideDown(300);
+     }
+   });
   
 
 
