@@ -3242,6 +3242,7 @@
     var player;
     var videoPlaying = false;
     var currentVideoId = ''; // Store the current video ID
+  
     // This function is called by the YouTube API once it is loaded
     function onYouTubeIframeAPIReady() {
       // Initialize the player with a default video (change the default video ID as needed)
@@ -3260,10 +3261,12 @@
       });
       currentVideoId = 'RbTocMHYh3s';
     }
+  
     // Called when the player is ready
     function onPlayerReady(event) {
       // Additional player setup can be done here if needed
     }
+  
     // Called when the player's state changes (e.g. playing, paused)
     function onPlayerStateChange(event) {
       if (event.data === YT.PlayerState.PLAYING) {
@@ -3273,6 +3276,7 @@
       }
       updateToggleButton();
     }
+  
     // Update the play/pause toggle button icon based on the current playing state
     function updateToggleButton() {
       var button = document.querySelector('.toggle-video');
@@ -3285,15 +3289,18 @@
         icon.classList.add('fa-play');
       }
     }
+  
     // Utility function to extract the video ID from a YouTube embed URL
     function extractVideoId(url) {
       // Example URL: https://www.youtube.com/embed/eRsGyueVLvQ
       var parts = url.split('/');
       return parts[parts.length - 1];
     }
+  
     // Wait for the DOM to fully load before adding event listeners
     document.addEventListener('DOMContentLoaded', function() {
       var videoItems = document.querySelectorAll('.video-item');
+  
       // (Optional) Update the dynamic counter for the initially active video item
       var activeVideo = document.querySelector('.video-item.active');
       var counter = document.querySelector('.toplist-videos span');
@@ -3303,6 +3310,7 @@
         var activeIndex = videoItemsArray.indexOf(activeVideo);
         counter.innerText = (activeIndex + 1) + '/' + videoItems.length;
       }
+  
       // Add click event listeners for each video item
       videoItems.forEach(function(item, index) {
         item.addEventListener('click', function() {
@@ -3312,6 +3320,7 @@
           });
           // Add the 'active' class to the clicked video item
           this.classList.add('active');
+  
           // Update the header title with the clicked video's title
           var videoTitle = this.querySelector('p').innerText;
           var headerTitle = document.querySelector('.toplist-videos .title-video-play');
@@ -3324,6 +3333,7 @@
             var currentIndex = Array.from(videoItems).indexOf(this);
             counter.innerText = (currentIndex + 1) + '/' + videoItems.length;
           }
+  
           // Extract the video ID from the data attribute and load the selected video
           var videoURL = this.getAttribute('data-video');
           var videoId = extractVideoId(videoURL);
@@ -3333,6 +3343,7 @@
           }
         });
       });
+  
       // Add click event listener for the toggle button to play/pause the video
       var toggleButton = document.querySelector('.toggle-video');
       if (toggleButton) {

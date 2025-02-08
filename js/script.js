@@ -145,7 +145,11 @@ $(document).ready(function () {
 
   sliderConfigs.forEach(({ id, options }) => $(id).owlCarousel(options));
 
+
+
+ 
   $(".right-choises li").on("click", function () {
+    event.preventDefault();
     $(".right-choises li").removeClass("active");
     $(this).addClass("active");
   });
