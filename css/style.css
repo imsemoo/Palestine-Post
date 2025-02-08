@@ -4561,6 +4561,7 @@ ul {
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 360px;
 }
 
 /* Styling for closed items */
