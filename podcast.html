@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فلسطين بوست</title>
+    <!-- Meta Description -->
+    <meta name="description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط، توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords"
+        content="فلسطين بوست, أخبار الشرق الأوسط, الأسرى الفلسطينيون, حقوق الإنسان,  , حماس , الاحتلال, العدالة, توثيق الانتهاكات, فلسطين, السجون" />
+
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content=" فلسطين بوست" />
+    <meta property="og:description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط، توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+    <meta property="og:image" content="img/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content=" فلسطين بوست" />
+    <meta name="twitter:description"
+        content="فلسطين بوست: منصة شاملة تقدم الأخبار المتعلقة بالشرق الأوسط،, حماس , توثيق الانتهاكات، وتسليط الضوء على قضايا حقوق الإنسان." />
+    <meta name="twitter:image" content="img/twitter-image.png" />
+
+    <!-- Include WaveSurfer.js -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./imgs/header logo.png " />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+
+<body>
+    <header>
+        <!-- top-bar-start -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-container">
+                    <!-- Logo Section with explicit dimensions -->
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./imgs/header logo.png" alt="شعار الموقع" loading="lazy" width="150"
+                                height="50" />
+                        </a>
+                    </div>
+
+                    <!-- Search Input Section -->
+                    <div class="top-bar-input">
+                        <input class="search-input" placeholder="بحث عن.." />
+                        <button class="top-bar-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+
+                    <!-- Left Icons Section -->
+                    <div class="left-icons">
+                        <!-- Currency Icon & Mega Menu -->
+                        <div class="icon-container">
+                            <img src="./imgs/dollar-circle.svg" alt="أيقونة العملات" loading="lazy" width="32"
+                                height="32" />
+                            <div class="curancy-mega-menu mega-menu">
+                                <div class="loading-overlay">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                                <div class="mega-menu-content">
+                                    <h2 class="currency-mega-menu-title">العملات</h2>
+                                    <div class="currency-mega-menu">
+                                        <!-- First Slider: الدولار اليوم -->
+                                        <div class="background-currency">
+                                            <header
+                                                class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                <div
+                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                    <div class="dot-title red-dot"></div>
+                                                    <h5>الدولار اليوم</h5>
+                                                </div>
+                                                <div class="date-slider"></div>
+                                            </header>
+                                            <div class="owl-carousel slider-usd owl-theme currency-slider"></div>
+                                        </div>
+
+                                        <!-- Second Slider: اليورو اليوم -->
+                                        <div class="background-currency">
+                                            <header
+                                                class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                <div
+                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                    <div class="dot-title red-dot"></div>
+                                                    <h5>اليورو اليوم</h5>
+                                                </div>
+                                                <div class="date-slider"></div>
+                                            </header>
+                                            <div class="owl-carousel slider-eur owl-theme currency-slider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v-line"></div>
+
+                        <!-- Weather Icon & Mega Menu -->
+                        <div class="icon-container">
+                            <img class="sun" src="./imgs/sun.png" alt="أيقونة الطقس" width="32" height="32" />
+                            <div class="weather-mega-menu curancy-mega-menu mega-menu">
+                                <div class="loading-overlay">
+                                    <div class="loading-spinner"></div>
+                                </div>
+                                <div class="mega-menu-content">
+                                    <h2 class="weather-mega-menu-title currency-mega-menu-title">الطقس</h2>
+                                    <div class="weather-sliders">
+                                        <!-- Slider for Weather Data -->
+                                        <div class="owl-carousel weather-slider owl-theme">
+                                            <!-- سيتم تعبئة البيانات ديناميكيًا هنا -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v-line"></div>
+
+                        <!-- Notifications Icon & Mega Menu -->
+                        <div class="icon-container">
+                            <img src="./imgs/notification.svg" alt="أيقونة الإشعارات" loading="lazy" width="32"
+                                height="32" />
+                            <div class="notifications-mega-menu mega-menu">
+                                <!-- Mega Menu Content for Notification -->
+                                <div class="mega-menu-content">
+                                    <div class="notifications-container">
+                                        <h2 class="notifications-header currency-mega-menu-title">اشعارات</h2>
+                                        <div class="notification-item">
+                                            <div class="d-flex gap-3">
+                                                <div class="image-noti">
+                                                    <img src="https://dummyimage.com/80x80/dddddd/000000/" alt>
+                                                </div>
+                                                <div class="text-noti">
+                                                    <div class="notification-header">
+                                                        <header
+                                                            class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                            <div class="title-boti">
+                                                                <div
+                                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                                    <div class="dot-title red-dot"></div>
+                                                                    <h5>غزة</h5>
+                                                                </div>
+                                                                <div class="date-slider"></div>
+                                                            </div>
+                                                        </header>
+                                                        <div class="notification-text">
+                                                            <h6>قطاع المياه في غزة</h6>
+                                                        </div>
+                                                    </div>
+                                                    <p>
+                                                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                        اليومية وارتفاع في التلوث.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="d-flex gap-3">
+                                                <div class="image-noti">
+                                                    <img src="https://dummyimage.com/80x80/dddddd/000000/" alt>
+                                                </div>
+                                                <div class="text-noti">
+                                                    <div class="notification-header">
+                                                        <header
+                                                            class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                            <div class="title-boti">
+                                                                <div
+                                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                                    <div class="dot-title red-dot"></div>
+                                                                    <h5>غزة</h5>
+                                                                </div>
+                                                                <div class="date-slider"></div>
+                                                            </div>
+                                                        </header>
+                                                        <div class="notification-text">
+                                                            <h6>قطاع المياه في غزة</h6>
+                                                        </div>
+                                                    </div>
+                                                    <p>
+                                                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                        اليومية وارتفاع في التلوث.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-item">
+                                            <div class="d-flex gap-3">
+                                                <div class="image-noti">
+                                                    <img src="https://dummyimage.com/80x80/dddddd/000000/" alt>
+                                                </div>
+                                                <div class="text-noti">
+                                                    <div class="notification-header">
+                                                        <header
+                                                            class="d-flex align-items-center gap-2 justify-content-between mb-2">
+                                                            <div class="title-boti">
+                                                                <div
+                                                                    class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                                                    <div class="dot-title red-dot"></div>
+                                                                    <h5>غزة</h5>
+                                                                </div>
+                                                                <div class="date-slider"></div>
+                                                            </div>
+                                                        </header>
+                                                        <div class="notification-text">
+                                                            <h6>قطاع المياه في غزة</h6>
+                                                        </div>
+                                                    </div>
+                                                    <p>
+                                                        قطاع المياه في غزة يتعرض للتدهور. تراجع حصة الفرد
+                                                        اليومية وارتفاع في التلوث.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Left Icons -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top-bar-end -->
+
+        <!-- nav-bar-start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <div class="d-flex align-items-center py-3 gap-2">
+                    <button class="navbar-toggler pt-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" alt="Menu toggle icon"></span>
+                    </button>
+                    <!-- Input field for mobile screens -->
+                    <input type="text" class="form-control d-lg-none" style="max-width: 450px" dir="rtl"
+                        placeholder="ابحث عن....." />
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link custom-hover" id="local-news-toggle" href="#">
+                                أخبار محلية<i class="fa-solid fa-chevron-down" alt="Dropdown arrow"></i>
+                            </a>
+                            <div class="mega-menu" id="local-news-slide-menu">
+                                <div class="menu-container">
+                                    <!-- Jerusalem -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>القدس</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Gaza -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>غزة</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Nablus -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>نابلس</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Hebron -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>الخليل</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Ramallah -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>رام الله</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Tulkarm -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>طولكرم</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Bethlehem -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>بيت لحم</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Qalqilya -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>قلقيلية</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Occupied Interior -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>الداخل المحتل</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Jericho -->
+                                    <div class="menu-item">
+                                        <div
+                                            class="title-with-circle title-with-circle-small d-flex align-items-center gap-2">
+                                            <div class="dot-title red-dot"></div>
+                                            <h3>أريحا</h3>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الاول للمنطقة
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    خبر الثانى للمنطقة
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- Other navigation items -->
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="articles.html">تقارير بوست</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="writer.html">الكاتب</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="podcast.html">بودكاست</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="single-article.html">تقرير مفرد</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="videos.html">فيديو</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="contact-us.html">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="about-us.html">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link custom-hover" href="send-news.html">ارسل خبر</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- nav-bar-end -->
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 d-flex align-items-center justify-content-between">
+                    <h4 class="title-breadcrumb">بودكاست </h4>
+                    <ul class="list-breadcrumb">
+                        <li>الرئيسية</li>
+                        <li><span>|</span></li>
+                        <li class="active">
+                            <a href="#">بودكاست </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="podcast-listing-section py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- Filter Column (Right Side) -->
+                <div class="col-lg-3  mb-4">
+                    <aside class="filter-sidebar p-3">
+                        <!-- Filter Title -->
+                        <h5 class="mb-3"><i class="fa-solid fa-filter me-2"></i>تصفية</h5>
+
+                        <!-- Category Filter -->
+                        <div class="mb-4">
+                            <h6 class="mb-2">الفئة</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="checkbox" class="me-2" />
+                                        <span>سياسي</span>
+                                        <span class="badge ms-auto">(12)</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="checkbox" class="me-2" />
+                                        <span>اقتصادي</span>
+                                        <span class="badge ms-auto">(8)</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="checkbox" class="me-2" />
+                                        <span>اجتماعي</span>
+                                        <span class="badge ms-auto">(5)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Classification Filter -->
+                        <div class="mb-4">
+                            <h6 class="mb-2">التصنيف</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="checkbox" class="me-2" />
+                                        <span>تقارير</span>
+                                        <span class="badge ms-auto">(10)</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="checkbox" class="me-2" />
+                                        <span>تحليلات</span>
+                                        <span class="badge ms-auto">(4)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Sort Filter -->
+                        <div class="mb-4">
+                            <h6 class="mb-2">ترتيب حسب</h6>
+                            <select class="form-select">
+                                <option>الأحدث</option>
+                                <option>الأكثر مشاهدة</option>
+                                <option>الأعلى تقييماً</option>
+                            </select>
+                        </div>
+
+                        <!-- Another Filter (Status) -->
+                        <div class="mb-4">
+                            <h6 class="mb-2">الحالة</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="radio" name="status" class="me-2" />
+                                        <span>مفتوح</span>
+                                        <span class="badge ms-auto">(2)</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="d-flex align-items-center">
+                                        <input type="radio" name="status" class="me-2" />
+                                        <span>مغلق</span>
+                                        <span class="badge ms-auto">(6)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- Podcasts Column (Left Side) -->
+                <div class="col-lg-9 ">
+                    <!-- Podcast Item #1 -->
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Podcast Item #2 -->
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="podcast-item mb-4">
+                        <div class="row g-0">
+                            <!-- Image -->
+                            <div class="col-md-4">
+                                <div class="podcast-img2">
+                                    <!-- استخدم صورة من dummyimage أو أي صورة لديك -->
+                                    <img src="https://dummyimage.com/300x200/ccc/000.png" alt="Podcast 1"
+                                        class="img-fluid rounded-start">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="col-md-8">
+                                <div class="podcast-content h-100 d-flex  justify-content-between">
+                                    <div class="p-3">
+                                        <h5 class="podcast-title mb-2">عنوان البودكاست الأول</h5>
+                                        <p class="podcast-desc mb-3">
+                                            وصف مختصر حول ما يتناوله هذا البودكاست من قضايا وأفكار،
+                                            مع تقديم نظرة عامة على المحاور الرئيسية التي سيتم مناقشتها.
+                                        </p>
+                                        <div class="podcast-details text-muted mb-3">
+                                            <span class="text-muted small me-3">
+                                                <i class="fa-solid fa-calendar-days me-1"></i>15/03/2025
+                                            </span>
+                                            <span class="me-3"><i class="fa-solid fa-user me-1"></i>اسم المقدم: أحمد
+                                                يوسف</span>
+                                            <span class="me-3"><i class="fa-solid fa-clock me-1"></i>المدة: 35
+                                                دقيقة</span>
+                                            <span><i class="fa-solid fa-eye me-1"></i>مشاهدات: 120</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="p-3 d-flex justify-content-between align-items-center">
+
+                                        <button class="btn btn-play">
+                                            <i class="fa-solid fa-play me-1"></i> 
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="about">
+                    <img class="footer-logo" src="./imgs/footer logo.png" alt="Footer Logo" />
+                    <p>
+                        فلسطين بوست منبرا اعلاميا جديدا, تعطي حيزا
+                        كبيرا للمواطن في صناعه الحدث الاعلامي,
+                        وتقدم مضمونا يجمع اهداف الاعلام.
+                    </p>
+                </div>
+
+                <div class="categores">
+                    <h4>تصنيفات</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+
+                <div class="categores">
+                    <h4>الوسوم</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+
+                <div class="categores">
+                    <h4>الوسوم</h4>
+                    <ul class="categores-line">
+                        <li><a href="#">نابلس</a></li>
+                        <li><a href="#">القدس</a></li>
+                        <li><a href="#">غزة</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">رام الله</a></li>
+                        <li><a href="#">الداخل المحتل</a></li>
+                        <li><a href="#">الخليل</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">قلقيلية</a></li>
+                        <li><a href="#">بيت لحم</a></li>
+                        <li><a href="#">طولكرم</a></li>
+                    </ul>
+
+                    <ul class="categores-line">
+                        <li><a href="#">اريحا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+
+        <!-- جميع الحقوق محفوظه-->
+        <div class="resrved-rights-bar">
+            <div class="container">
+                <div class="resrved-rights-container">
+                    <h6>جميع الحقوق محفوظة فلسطين بوست 2024</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end-->
+
+    <!-- scroll -->
+    <div id="scrollToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- تحميل مكتبة YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script src="./js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="./js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="./js/currencies.js" type="text/javascript"></script>
+    <script src="./js/weather.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
+
+</body>
+
+</html>
