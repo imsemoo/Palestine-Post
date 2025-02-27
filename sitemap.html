@@ -43,23 +43,19 @@
 
     <!-- Inline CSS for the Sitemap Section -->
     <style>
-     
-        /* ==============================
+        /* ========================================
        Sitemap Section Container
-       ============================== */
+       ======================================== */
         .sitemap-section {
             padding: 60px 20px;
             background-color: #f9f9f9;
         }
 
-        .sitemap-section .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        /* ------------------------------
+
+        /* ----------------------------------------
        Sitemap Header (Title & Subtitle)
-       ------------------------------ */
+       ---------------------------------------- */
         .sitemap-header {
             text-align: center;
             margin-bottom: 40px;
@@ -77,9 +73,9 @@
             color: #757575;
         }
 
-        /* ------------------------------
+        /* ----------------------------------------
        Sitemap Search Bar
-       ------------------------------ */
+       ---------------------------------------- */
         .sitemap-search {
             text-align: center;
             margin-bottom: 50px;
@@ -103,7 +99,6 @@
             border: none;
             outline: none;
             color: #333;
-            direction: rtl;
         }
 
         .sitemap-search-btn {
@@ -120,27 +115,17 @@
             background-color: #023b56;
         }
 
-        /* ------------------------------
-       Sitemap Grid Layout
-       ------------------------------ */
-        .sitemap-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        /* ------------------------------
-       Sitemap Card Styles
-       ------------------------------ */
+        /* ========================================
+       Sitemap Card (Full Width Layout)
+       ======================================== */
         .sitemap-card {
             background-color: #fff;
             border-radius: 12px;
             padding: 30px 20px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
             text-align: center;
         }
 
@@ -149,7 +134,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
-        /* Icon container styled as a circle */
+        /* Icon wrapper styled as a centered circle */
         .icon-wrapper {
             width: 80px;
             height: 80px;
@@ -158,45 +143,62 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin: 0 auto 10px;
             font-size: 40px;
             color: #33b3c0;
         }
 
+        /* Card Title */
         .sitemap-card h3 {
-            font-size: 22px;
+            font-size: 28px;
             color: #023b56;
-            margin-bottom: 15px;
+            margin-bottom: 40px;
             font-weight: bold;
         }
 
+        /* ----------------------------------------
+       Sitemap Links with Multi-Column Layout
+       ---------------------------------------- */
         .sitemap-card ul {
-            list-style: none;
+            list-style: disc;
             padding: 0;
-            margin: 0;
+            margin: 0 auto;
+            /* Use CSS columns to split the list into multiple columns */
+            column-count: 4;
+            column-gap: 30px;
+            text-align: start;
+            padding-right: 2rem;
+        }
+
+        /* Adjust column-count based on available width */
+        @media (max-width: 768px) {
+            .sitemap-card ul {
+                column-count: 1;
+            }
         }
 
         .sitemap-card ul li {
             margin-bottom: 10px;
+            font-size: 16px;
         }
 
         .sitemap-card ul li a {
-            font-size: 16px;
             color: #757575;
+            transition: color 0.3s ease;
         }
 
         .sitemap-card ul li a:hover {
             color: #33b3c0;
         }
 
-        /* ------------------------------
-       Extra Resources Section (Optional)
-       ------------------------------ */
+        /* ========================================
+       Extra Resources Section
+       ======================================== */
         .sitemap-extra {
             margin-top: 60px;
-            text-align: center;
             padding-top: 40px;
             border-top: 1px solid #ddd;
+            text-align: center;
         }
 
         .sitemap-extra h3 {
@@ -222,7 +224,6 @@
         }
 
         .sitemap-extra-links a {
-            display: inline-block;
             padding: 12px 24px;
             background-color: #33b3c0;
             color: #fff;
@@ -235,9 +236,9 @@
             background-color: #023b56;
         }
 
-        /* ------------------------------
+        /* ========================================
        Responsive Adjustments
-       ------------------------------ */
+       ======================================== */
         @media (max-width: 576px) {
             .sitemap-header h2 {
                 font-size: 28px;
@@ -249,6 +250,11 @@
 
             .sitemap-card {
                 padding: 20px 15px;
+            }
+
+            .sitemap-card ul {
+                column-count: 2;
+                column-gap: 20px;
             }
         }
     </style>
@@ -731,8 +737,9 @@
             <!-- Sitemap Header -->
             <div class="sitemap-header">
                 <h2>خريطة الموقع</h2>
-                <p>تصفح جميع أقسام موقع فلسطين بوست بسهولة ويسر</p>
+                <p>استكشف جميع أقسام موقع فلسطين بوست والمحتوى الإعلامي الشامل</p>
             </div>
+
             <!-- Sitemap Search Bar -->
             <div class="sitemap-search">
                 <div class="sitemap-input-group">
@@ -743,7 +750,8 @@
                     </button>
                 </div>
             </div>
-            <!-- Sitemap Cards Grid -->
+
+            <!-- Sitemap Cards Grid (Full Width Cards) -->
             <div class="sitemap-grid">
                 <!-- Card 1: Local News -->
                 <div class="sitemap-card">
@@ -752,14 +760,24 @@
                     </div>
                     <h3>أخبار محلية</h3>
                     <ul>
-                        <li><a href="#">غزة</a></li>
-                        <li><a href="#">رام الله</a></li>
-                        <li><a href="#">الخليل</a></li>
-                        <li><a href="#">القدس</a></li>
-                        <li><a href="#">نابلس</a></li>
-                        <li><a href="#">طولكرم</a></li>
+                        <li>
+
+                            <a href="#">أخبار غزة اليومية</a>
+                        </li>
+                        <li><a href="#">تحديثات رام الله</a></li>
+                        <li><a href="#">تقارير الخليل</a></li>
+                        <li><a href="#">القدس وعناوينها</a></li>
+                        <li><a href="#">نابلس – آخر الأحداث</a></li>
+                        <li><a href="#">طولكرم – ملخص الأخبار</a></li>
+                        <li><a href="#">أريحا – التقارير الميدانية</a></li>
+                        <li><a href="#">جنين – أخبار المواطنين</a></li>
+                        <li><a href="#">سلفيت – التصريحات الرسمية</a></li>
+                        <li><a href="#">مؤتمرات صحفية محلية</a></li>
+                        <li><a href="#">بيانات وإعلانات</a></li>
+                        <li><a href="#">تغطيات إخبارية حصرية</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 2: Reports -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -767,12 +785,19 @@
                     </div>
                     <h3>تقارير بوست</h3>
                     <ul>
-                        <li><a href="#">تقرير اليوم</a></li>
-                        <li><a href="#">تقارير سابقة</a></li>
-                        <li><a href="#">تقارير حقوقية</a></li>
-                        <li><a href="#">ملفات ساخنة</a></li>
+                        <li><a href="#">تحقيقات ميدانية</a></li>
+                        <li><a href="#">تقارير حقوق الإنسان</a></li>
+                        <li><a href="#">تحليل سياسي معمق</a></li>
+                        <li><a href="#">ملفات اقتصادية</a></li>
+                        <li><a href="#">رصد الانتهاكات</a></li>
+                        <li><a href="#">تغطيات الحصار</a></li>
+                        <li><a href="#">مقابلات حصرية</a></li>
+                        <li><a href="#">تحليلات اقتصادية</a></li>
+                        <li><a href="#">تقارير أسرى الفلسطينيين</a></li>
+                        <li><a href="#">ملفات ومذكرات</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 3: Podcast -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -780,12 +805,16 @@
                     </div>
                     <h3>بودكاست</h3>
                     <ul>
-                        <li><a href="#">جميع الحلقات</a></li>
+                        <li><a href="#">حلقة الأسبوع</a></li>
                         <li><a href="#">بودكاست سياسي</a></li>
                         <li><a href="#">بودكاست اقتصادي</a></li>
-                        <li><a href="#">حلقات منوعة</a></li>
+                        <li><a href="#">بودكاست ثقافي</a></li>
+                        <li><a href="#">بودكاست اجتماعي</a></li>
+                        <li><a href="#">مقابلات صوتية</a></li>
+                        <li><a href="#">نقاشات وتحليلات</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 4: About Us -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -793,11 +822,14 @@
                     </div>
                     <h3>من نحن</h3>
                     <ul>
-                        <li><a href="about-us.html">تعرف علينا</a></li>
-                        <li><a href="#">رؤيتنا وأهدافنا</a></li>
-                        <li><a href="#">فريق العمل</a></li>
+                        <li><a href="about-us.html">تاريخ فلسطين بوست</a></li>
+                        <li><a href="about-us.html#mission">رسالتنا ورؤيتنا</a></li>
+                        <li><a href="about-us.html#team">فريق العمل</a></li>
+                        <li><a href="about-us.html#testimonials">آراء المتابعين</a></li>
+                        <li><a href="about-us.html#partners">شركاؤنا الإعلاميون</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 5: Contact Us -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -805,11 +837,13 @@
                     </div>
                     <h3>اتصل بنا</h3>
                     <ul>
-                        <li><a href="contact-us.html">نموذج التواصل</a></li>
-                        <li><a href="#">سياسة الخصوصية</a></li>
-                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="contact-us.html">نموذج الاتصال</a></li>
+                        <li><a href="contact-us.html#privacy">سياسة الخصوصية</a></li>
+                        <li><a href="contact-us.html#terms">الشروط والأحكام</a></li>
+                        <li><a href="contact-us.html#feedback">آراء العملاء</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 6: Submit News -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -817,24 +851,28 @@
                     </div>
                     <h3>أرسل خبر</h3>
                     <ul>
-                        <li><a href="send-news.html">نموذج إرسال خبر</a></li>
-                        <li><a href="#">دليل الإرشادات</a></li>
-                        <li><a href="#">ماذا ننشر؟</a></li>
+                        <li><a href="send-news.html">نموذج إرسال الخبر</a></li>
+                        <li><a href="send-news.html#guide">دليل التحرير</a></li>
+                        <li><a href="send-news.html#what">ما ننشره من أخبار</a></li>
                     </ul>
                 </div>
-                <!-- Card 7: International News (Extra Section) -->
+
+                <!-- Card 7: International News -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
                         <i class="fa-solid fa-globe"></i>
                     </div>
                     <h3>أخبار دولية</h3>
                     <ul>
-                        <li><a href="#">أمريكا</a></li>
-                        <li><a href="#">أوروبا</a></li>
-                        <li><a href="#">آسيا</a></li>
-                        <li><a href="#">أفريقيا</a></li>
+                        <li><a href="#">أخبار أمريكا</a></li>
+                        <li><a href="#">أخبار أوروبا</a></li>
+                        <li><a href="#">أخبار آسيا</a></li>
+                        <li><a href="#">أخبار أفريقيا</a></li>
+                        <li><a href="#">أخبار الشرق الأوسط</a></li>
+                        <li><a href="#">تقارير دولية</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 8: Videos -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -843,10 +881,13 @@
                     <h3>فيديوهات</h3>
                     <ul>
                         <li><a href="#">جميع الفيديوهات</a></li>
-                        <li><a href="#">تقارير الفيديو</a></li>
+                        <li><a href="#">تقارير مرئية</a></li>
                         <li><a href="#">مقابلات فيديو</a></li>
+                        <li><a href="#">وثائقيات</a></li>
+                        <li><a href="#">ملخصات إخبارية</a></li>
                     </ul>
                 </div>
+
                 <!-- Card 9: Articles -->
                 <div class="sitemap-card">
                     <div class="icon-wrapper">
@@ -855,16 +896,19 @@
                     <h3>مقالات</h3>
                     <ul>
                         <li><a href="#">أحدث المقالات</a></li>
-                        <li><a href="#">مقالات تحليلية</a></li>
-                        <li><a href="#">مقالات رأي</a></li>
+                        <li><a href="#">تحليلات وآراء</a></li>
+                        <li><a href="#">مقالات ثقافية</a></li>
+                        <li><a href="#">أرشيف المقالات</a></li>
+                        <li><a href="#">مقالات اجتماعية</a></li>
                     </ul>
                 </div>
             </div>
+
             <!-- Extra Resources Section -->
             <div class="sitemap-extra">
                 <h3>مزيد من الموارد</h3>
-                <p>استكشف المزيد من الأقسام والموارد التي يقدمها موقع فلسطين بوست لتعزيز تجربتك الإعلامية، والاطلاع على
-                    أرشيف الأخبار وشركائنا والمكتبة الرقمية والمدونة.</p>
+                <p>استكشف المزيد من الأقسام والموارد التي يقدمها موقع فلسطين بوست لتعزيز تجربتك الإعلامية والاطلاع على
+                    أرشيف الأخبار، شركاؤنا، المدونة والمكتبة الرقمية.</p>
                 <div class="sitemap-extra-links">
                     <a href="#">أرشيف الأخبار</a>
                     <a href="#">شركاؤنا</a>
@@ -872,9 +916,11 @@
                     <a href="#">المكتبة الرقمية</a>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Sitemap Section End -->
+
 
 
     <!-- footer start -->
